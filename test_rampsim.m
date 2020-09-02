@@ -7,8 +7,8 @@ IASchain=ramp.dsp.infineondetector('sensitivity','v3_1');
 
 % Test files
 wavFiles={ ...
-					 'GBTD-01-01-LP-gb1_000.wav', ...
-					 'overdriven_glass_break_1_000_a003_30_60_000.wav'};
+           'GBTD-01-01-LP-gb1_000.wav', ...
+           'overdriven_glass_break_1_000_a003_30_60_000.wav'};
 
 for i=1:length(wavFiles)
   inFile = wavFiles{i};
@@ -21,7 +21,7 @@ for i=1:length(wavFiles)
   [~,output]=system(cmd);
 
   % Extract the detections from stdout
-	% For some reason, Octave is not capturing the stdout on windows like Matlab did
+  % For some reason, Octave is not capturing the stdout on windows like Matlab did
   triggersCell=regexp(output,'Event trigger from ([.0-9]*)s to ([.0-9]*)s','tokens');
   triggers=[];
   for j=1:length(triggersCell)
