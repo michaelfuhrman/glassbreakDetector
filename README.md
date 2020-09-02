@@ -1,6 +1,9 @@
 # glassbreak-sim-ring-v0.0
 The first glassbreak detection model bundled for Ring in July 2020. 
 
+## To use
+Run build_rampsim.m to generate a bundled rampsim binary. Then run test_rampsim.m to verify it's operation on two audio files.
+
 ## Notes
 * Had to make changes to the following ramp operators
   * ramp_model_lr.m - to accommodate changes to the neural net code
