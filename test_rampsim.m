@@ -29,7 +29,9 @@ for i=1:length(wavFiles)
     triggers(j,2)=str2num(triggersCell{j}{2});
   end
   outDetect=2.5*List2Detections(t,triggers);
-
+  % load(outputTarget.mat); % loads variable outputTarget
+  % filesMatch = sum( (outputTarget>0) ~= (outDetect>0) ) < 100;
+  
   % Read the rampsim output that has preroll appended
   [out,Fs]=audioread(outFile);
 
