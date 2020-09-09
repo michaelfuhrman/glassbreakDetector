@@ -1,4 +1,4 @@
-# glassbreak-sim-ring-v0.0
+# c:/Users/Brandon/Aspinity Dropbox glassbreak-sim-ring-v0.0
 The first glassbreak detection model bundled for Ring in July 2020. 
 
 ## To use
