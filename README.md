@@ -1,5 +1,10 @@
-# c:/Users/Brandon/Aspinity Dropbox glassbreak-sim-ring-v0.0
+# Glass break models for Ring
+
 The first glassbreak detection model bundled for Ring in July 2020. 
+
+# Original model
+
+Directory v0/ has build cases and test cases. Directory aspinity_infineon_gb_bundle_2020.07.20/ has the bundle that was actually sent.
 
 ## To use
 Run build_rampsim.m to generate a bundled rampsim binary. Then run test_rampsim.m to verify it's operation on two audio files.
@@ -16,7 +21,7 @@ collect2.exe: error: ld returned 1 exit status
 make: *** [Makefile:20: bin/rampSim.exe] Error 1
 ```
 
-# Updates
+# Updated model for v1 to send
 
 v1/ contains a signal chain complete signal chain that generates a bundled windows rampsim binary. See compileIn.h for 
 the sim netlist.
