@@ -20,7 +20,8 @@ gain=1;
 % For declaring glass break
 
 Chain = gb_model_2020_09_09(ramp,gain);
-y=Chain(t,x);
+% y=Chain(t,x);
+y=modelChain(Chain > ramp.pin.A3(),t,x);
 iterations=8000; %5000 before
 gap=0;
 acceptableLatency = .05;

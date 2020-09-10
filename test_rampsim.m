@@ -1,12 +1,8 @@
 % Test
-% buildDir variable comes from build_rampsim.m
-rampSimBin=expandVarPath(['%AspBox%/engr/sig_proc/Projects/External/Infineon/IAS_glassbreak/bdr/bundle_build/' buildDir '/bin/rampSim.exe']);
+rampSimBin='rampSim.exe';
 
 % Load test file
-wavFiles={ ...
-					 'GBTD-01-01-LP-gb1_000.wav', ...
-					 'overdriven_glass_break_1_000_a003_30_60_000.wav'};
-inFile = wavFiles{1};
+inFile = 'GB_TestClip_v1_16000_mixed_included.wav';
 [in,Fs]=audioread(inFile);
 t=(0:(length(in)-1))/Fs;
 

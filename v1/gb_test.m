@@ -17,15 +17,26 @@ load('nnZCR.mat', 'nnZCR');
 [Chain_declareThud, Chain_declareShatter] = gb_model_2020_09_09(ramp, gain, nnThud, nnZCR);
 
 nD=1:25*Fs; % subset of indices to run the test on
+nD=1:length(t);
+% nD=find(t>80 & t<140);
 
 % The Matlab eval
 thudEval = Chain_declareThud(t(nD),x(nD));
 shatterEval = Chain_declareShatter(t(nD),x(nD));
-subplot(2,1,1); plot(t(nD),thudEval*1.1, t(nD),l(nD)*2.5);
+a1=subplot(2,1,1); plot(t(nD),thudEval*1.1, t(nD),l(nD)*2.5);
 subplot(2,1,2); plot(t(nD),shatterEval*1.1, t(nD),l(nD)*2.5);
 
 % Now in rampsim
+% rampSim=expandVarPath('%AspBox%\engr\sw\Utilities\rampSim\bin\rampSim.exe');
+% inFile=tmpFile('inRunNetlist.wav');
+% outFile=tmpFile('outRunNetlist.auf');
+% netlistName='netlist.net';
+
+% [status,output]=system(sprintf('"%s" "%s" "%s" "%s"',rampSim,netlistName,inFile,outFile));
+% [y]=audioread(outFile);
+% a2=subplot(2,1,2); plot(t(nD),y*5);
+
 thudSim = modelChain(Chain_declareThud,t(nD),x(nD));
 shatterSim = modelChain(Chain_declareShatter,t(nD),x(nD));
-subplot(2,1,1); plot(t(nD),thudEval*1.1, t(nD),thudSim*1.2, t(nD),l(nD)*2.5);
-subplot(2,1,2); plot(t(nD),shatterEval*1.1, t(nD),shatterSim*1.2, t(nD),l(nD)*2.5);
+subplot(2,1,1); plot(t(nD),thudEval*1.1, t(nD),thudSim(:,2)*1.2, t(nD),l(nD)*2.5);
+subplot(2,1,2); plot(t(nD),shatterEval*1.1, t(nD),shatterSim(:,2)*1.2, t(nD),l(nD)*2.5);
