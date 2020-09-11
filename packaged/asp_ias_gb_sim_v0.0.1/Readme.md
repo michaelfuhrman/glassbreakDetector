@@ -38,6 +38,7 @@ section of http://www.mega-nerd.com/libsndfile/
 
 ## Test and usage
 
-* [Shell](test/shell/gb_sim_v0.0.1.shell.md): 
-* [Octave](test/octave/gb_sim_v0.0.1.octave.ipynb): 
+* [Shell](test/shell/README.md): Instructions for direct use at shell. The same test scripts
+  that were provided with v0.0.0.
+* [Octave](test/octave/README.md): Examples and results running from Octave.
 
