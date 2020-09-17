@@ -1,0 +1,91 @@
+Reading netlist... done
+Reading wav file... done
+Initializing circuits... Done
+Checking netlist... Done
+Number of nets: 169
+Simulator 0
+Progress: 0%
+Simulator 1
+Progress: 0%Event trigger from 1.998938s to 2.238188s
+Progress: 1%Progress: 2%Event trigger from 5.916313s to 6.072188s
+Progress: 3%Event trigger from 8.567375s to 8.787000s
+Progress: 4%Event trigger from 11.798750s to 12.023688s
+Progress: 5%Event trigger from 14.154938s to 14.235750s
+Progress: 6%Progress: 7%Event trigger from 17.326250s to 17.407063s
+Progress: 8%Event trigger from 21.257687s to 21.563375s
+Progress: 9%Event trigger from 24.208562s to 24.289375s
+Event trigger from 24.309125s to 24.434500s
+Progress: 10%Progress: 11%Event trigger from 27.179375s to 27.260187s
+Event trigger from 29.602000sProgress: 12% to 29.682812s
+Progress: 13%Progress: 14%Progress: 15%Progress: 16%Progress: 17%Event trigger from 43.765875s to 44.111937s
+Progress: 18%Progress: 19%Event trigger from 47.413125s to 47.538125s
+Event trigger from 49.056250s to 49.187375s
+Progress: 20%Event trigger from 50.469375s to 50.845750s
+Progress: 21%Progress: 22%Event trigger from 55.654375s to 55.962062s
+Event trigger from 56.370000s to 56.450812s
+Progress: 23%Event trigger from 59.093937s to 59.180937s
+Progress: 24%Event trigger from 60.847062s to 61.138312s
+Progress: 25%Event trigger from 64.095625s to 64.176437s
+Event trigger from 64.187625sProgress: 26% to 64.509562s
+Progress: 27%Progress: 28%Progress: 29%Progress: 30%Event trigger from 76.173687s to 76.483125s
+Progress: 31%Event trigger from 78.355687s to 78.449125s
+Event trigger from 78.461562s to 78.695250s
+Progress: 32%Event trigger from 79.325437s to 79.708875s
+Progress: 33%Event trigger from 82.871625s to 83.237937s
+Progress: 34%Event trigger from 84.538500s to 84.893437s
+Progress: 35%Event trigger from 87.737187s to 88.100000s
+Progress: 36%Event trigger from 89.627375s to 89.708187s
+Progress: 37%Event trigger from 91.421437s to 91.502250s
+Event trigger from 91.518625s to 91.811500s
+Progress: 38%Progress: 39%Event trigger from 96.392500s to 96.624750s
+Event trigger from 98.194250s to 98.275062s
+Progress: 40%Progress: 41%Event trigger from 102.039812s to 102.044875s
+Event trigger from 102.055375s to 102.292187s
+Progress: 42%Event trigger from 103.881687s to 103.962500s
+Progress: 43%Event trigger from 106.273187s to 106.489687s
+Progress: 44%Progress: 45%Event trigger from 112.884687s to 113.171562s
+Progress: 46%Progress: 47%Progress: 48%Progress: 49%Progress: 50%Progress: 51%Progress: 52%Progress: 53%Event trigger from 132.215312s to 132.560500s
+Progress: 54%Event trigger from 134.731500s to 135.000062s
+Event trigger from 135.764312sProgress: 55% to 135.946062s
+Event trigger from 136.092875s to 136.472125s
+Progress: 56%Event trigger from 139.952937s to 140.033750s
+Progress: 57%Progress: 58%Progress: 59%Progress: 60%Progress: 61%Event trigger from 152.738000s to 152.925750s
+Progress: 62%Progress: 63%Event trigger from 155.663000s to 155.667250s
+Event trigger from 155.670125s to 156.044688s
+Event trigger from 156.216750s to 156.297563s
+Event trigger from 156.597750s to 156.982313s
+Event trigger from 157.792125s to 157.872938s
+Event trigger from 157.928000sProgress: 64% to 158.192563s
+Event trigger from 160.184688sProgress: 65% to 160.560625s
+Event trigger from 161.838125s to 161.937750s
+Progress: 66%Progress: 67%Progress: 68%Progress: 69%Event trigger from 171.370375s to 171.657438s
+Progress: 70%Event trigger from 174.609125s to 174.970625s
+Progress: 71%Progress: 72%Event trigger from 180.039688s to 180.240313s
+Progress: 73%Progress: 74%Event trigger from 183.223813s to 183.304625s
+Event trigger from 184.802500s to 185.159313s
+Progress: 75%Progress: 76%Event trigger from 188.137125s to 188.514188s
+Progress: 77%Event trigger from 190.747188s to 191.016813s
+Progress: 78%Event trigger from 193.548438s to 193.862313s
+Progress: 79%Event trigger from 197.013938s to 197.332875s
+Progress: 80%Event trigger from 198.761375s to 198.842188s
+Progress: 81%Progress: 82%Progress: 83%Event trigger from 205.639000s to 205.820750s
+Progress: 84%Event trigger from 208.214500s to 208.492313s
+Progress: 85%Progress: 86%Event trigger from 214.510688s to 214.846750s
+Progress: 87%Progress: 88%Event trigger from 217.889875s to 218.244563s
+Event trigger from 218.538000s to 218.539750s
+Event trigger from 218.539813s to 218.819125s
+Progress: 89%Event trigger from 221.139375s to 221.558500s
+Progress: 90%Event trigger from 224.145813s to 224.521625s
+Progress: 91%Event trigger from 225.840188s to 226.175000s
+Progress: 92%Event trigger from 227.828375s to 228.210375s
+Progress: 93%Event trigger from 230.335750s to 230.677000s
+Progress: 94%Event trigger from 232.786000s to 232.866813s
+Event trigger from 232.929125s to 233.019000s
+Progress: 95%Event trigger from 235.366313s to 235.761250s
+Event trigger from 236.368688s to 236.786813s
+Progress: 96%Event trigger from 238.677250s to 238.957375s
+Progress: 97%Event trigger from 240.189000s to 240.501688s
+Progress: 98%Progress: 99%Event trigger from 245.521938s to 245.912438s
+Progress: 100%
+Simulator 2
+Progress: 0%
