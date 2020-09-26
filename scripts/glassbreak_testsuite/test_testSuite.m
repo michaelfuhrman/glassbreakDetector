@@ -28,8 +28,6 @@ set_sucess_thresh=0;
 % Plot the results along with success thresholds (should be set) to compare the performance
 % of the model to our vision for the model
 if set_sucess_thresh
-    
-    success_thresholds=setup_success_thresholds(datapath);
-
-    table=GB_Test_Suite_Results(res,1,1,success_thresholds);
+  success_thresholds=setup_success_thresholds(datapath);
+  table=GB_Test_Suite_Results(res,1,1,success_thresholds);
 end
