@@ -16,3 +16,4 @@ Changes were made in Drobox to make this work
 - **gb_train.m** - 
 - **gb_model_2020_09_09.m** - Defines the model
 - [**Preparation notes**](gb_characterization_pre_send.ipynb)
+- [Ring test results](ring-test-results)

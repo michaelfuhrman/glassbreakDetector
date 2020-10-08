@@ -1,0 +1,15 @@
+digraph G {
+  Iref -> vcg [label="vcg"];
+  Iref -> S2C0pmir [label="vcg"];
+  A0 -> S1C3filt [label="inPos"];
+  A0 -> S1C5filt [label="inPos"];
+  mid -> S1C3filt [label="mid"];
+  mid -> S1C3filt [label="mid"];
+  mid -> S1C5filt [label="mid"];
+  mid -> S1C5filt [label="mid"];
+  S1C3filt -> S1C3peak1 [label="bpf_0"];
+  S1C3peak1 -> S1C4peak1 [label="rms_0"];
+  S1C3peak1 -> A1 [label="rms_0"];
+  S1C5filt -> S1C5peak1 [label="bpf_1"];
+  S1C5peak1 -> S1C6peak1 [label="rms_1"];
+}
