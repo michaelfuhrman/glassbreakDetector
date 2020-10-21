@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RampSim Netlist
+%   Generated: 10/18/2020 15:53:52
+%   PWD: C:\Users\Brandon\Desktop\glassbreak\model\dev\vAAD_ring-parts\v1_tie-together
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Design: gb
+Vsrc Pos=Vhalf Neg=Gnd WavChan=-1 Vdc=1.25
+Vsrc Pos=mid Neg=Gnd WavChan=-1 Vdc=0
+Vsrc Pos=Vdd Neg=Gnd WavChan=-1 Vdc=2.5
+%% I/O
+Vsrc Pos=inPos Neg=Gnd WavChan=0 Vdc=0
+Vsrc Pos=inNeg Neg=Gnd WavChan=1 Vdc=0
+ONod 0=inPos 1=preroll_trig 2=thud_declare 3=blinky 4=shatter_declare 5=thud_filt 6=shatter_filt
+
+% Gain
+AmpX In=inPos Out=in_gain Av=3
+% BPF
+MACn In0=inPos Out=bpf_4k_bpfScale Av0=13.5135
+TANH In=bpf_4k_bpfScale Out=bpf_4k_bpfTanh Av=0.0740001
+Filt In=bpf_4k_bpfTanh Ref=Gnd Out=bpf_4k type=2 order=2 fc=4000 Q=3 Av=-2
+% Peak
+PkDD In=bpf_4k Out=rms_4k Saturate=1 a=24392.5 d=203.65 Par=.4
+% Log
+Sub2 Pos=rms_4k Neg=Gnd Out=rms_4k_log_logint Av=1.5e-06
+NMir In=rms_4k_log_logint Log=rms_4k_log MirOut=Gnd PreLog=0.02 InLog=6.20e-013 Ioff=5e-09
+% LPF
+Filt In=rms_4k_log Ref=Gnd Out=noise_4k_log type=0 order=1 fc=4 Av=1
+% BPF
+MACn In0=in_gain Out=bpf_1k_bpfScale Av0=13.5135
+TANH In=bpf_1k_bpfScale Out=bpf_1k_bpfTanh Av=0.0740001
+Filt In=bpf_1k_bpfTanh Ref=Gnd Out=bpf_1k type=2 order=2 fc=1000 Q=3 Av=-2
+% Peak
+PkDD In=bpf_1k Out=rms_1k Saturate=1 a=9757 d=54.3068 Par=.4
+% BPF
+MACn In0=in_gain Out=bpf_400_bpfScale Av0=13.5135
+TANH In=bpf_400_bpfScale Out=bpf_400_bpfTanh Av=0.0740001
+Filt In=bpf_400_bpfTanh Ref=Gnd Out=bpf_400 type=2 order=2 fc=400 Q=3 Av=-2
+% Peak
+PkDD In=bpf_400 Out=rms_400 Saturate=1 a=4268.69 d=23.7592 Par=.4
+% Log
+Sub2 Pos=rms_400 Neg=Gnd Out=rms_400_log_logint Av=1.5e-06
+NMir In=rms_400_log_logint Log=rms_400_log MirOut=Gnd PreLog=0.02 InLog=6.20e-013 Ioff=5e-09
+% LPF
+Filt In=rms_400_log Ref=Gnd Out=noise_400_log type=0 order=1 fc=4 Av=1
+% Register
+Vsrc Pos=vddLoc Neg=Gnd WavChan=-1 Vdc=2.5
+
+% Neural net
+OTAx Pos=rms_4k Neg=mid Ibp=Gnd Out=nn_nn_thud_rms_4k_0_compress Ib=0.06475 Scale=15.444
+OTAx Pos=rms_4k_log Neg=noise_4k_log Ibp=Gnd Out=nn_nn_thud_rms_4k_log_1_compress Ib=0.06475 Scale=15.444
+OTAx Pos=rms_1k Neg=mid Ibp=Gnd Out=nn_nn_thud_rms_1k_2_compress Ib=0.06475 Scale=15.444
+OTAx Pos=rms_400 Neg=mid Ibp=Gnd Out=nn_nn_thud_rms_400_3_compress Ib=0.06475 Scale=15.444
+OTAx Pos=rms_400_log Neg=noise_400_log Ibp=Gnd Out=nn_nn_thud_rms_400_log_4_compress Ib=0.06475 Scale=15.444
+MACn In0=nn_nn_thud_rms_4k_0_compress Av0=0.331591 In1=nn_nn_thud_rms_4k_log_1_compress Av1=-0.288199 In2=nn_nn_thud_rms_1k_2_compress Av2=-0.926606 In3=nn_nn_thud_rms_400_3_compress Av3=-0.514696 In4=nn_nn_thud_rms_400_log_4_compress Av4=-0.114759 Out=nn_nn_thud_z_0_0 Offset=-0.213412
+MACn In0=nn_nn_thud_rms_4k_0_compress Av0=-0.294256 In1=nn_nn_thud_rms_4k_log_1_compress Av1=-0.0578501 In2=nn_nn_thud_rms_1k_2_compress Av2=-0.432831 In3=nn_nn_thud_rms_400_3_compress Av3=-0.31348 In4=nn_nn_thud_rms_400_log_4_compress Av4=-0.723438 Out=nn_nn_thud_z_0_1 Offset=-0.180523
+MACn In0=nn_nn_thud_rms_4k_0_compress Av0=0.791641 In1=nn_nn_thud_rms_4k_log_1_compress Av1=0.905472 In2=nn_nn_thud_rms_1k_2_compress Av2=0.171186 In3=nn_nn_thud_rms_400_3_compress Av3=0.325212 In4=nn_nn_thud_rms_400_log_4_compress Av4=0.73354 Out=nn_nn_thud_z_0_2 Offset=-0.0274878
+MACn In0=nn_nn_thud_rms_4k_0_compress Av0=0.63385 In1=nn_nn_thud_rms_4k_log_1_compress Av1=-1.39616 In2=nn_nn_thud_rms_1k_2_compress Av2=0.100302 In3=nn_nn_thud_rms_400_3_compress Av3=-0.49071 In4=nn_nn_thud_rms_400_log_4_compress Av4=-0.590606 Out=nn_nn_thud_z_0_3 Offset=0.00366105
+MACn In0=nn_nn_thud_rms_4k_0_compress Av0=0.346971 In1=nn_nn_thud_rms_4k_log_1_compress Av1=0.201125 In2=nn_nn_thud_rms_1k_2_compress Av2=-0.793546 In3=nn_nn_thud_rms_400_3_compress Av3=-0.494318 In4=nn_nn_thud_rms_400_log_4_compress Av4=-0.20339 Out=nn_nn_thud_z_0_4 Offset=-0.176451
+MACn In0=nn_nn_thud_rms_4k_0_compress Av0=-0.247004 In1=nn_nn_thud_rms_4k_log_1_compress Av1=-0.825876 In2=nn_nn_thud_rms_1k_2_compress Av2=-0.932059 In3=nn_nn_thud_rms_400_3_compress Av3=0.156021 In4=nn_nn_thud_rms_400_log_4_compress Av4=-0.643831 Out=nn_nn_thud_z_0_5 Offset=0.0377706
+MACn In0=nn_nn_thud_rms_4k_0_compress Av0=1.06862 In1=nn_nn_thud_rms_4k_log_1_compress Av1=-1.25409 In2=nn_nn_thud_rms_1k_2_compress Av2=0.300455 In3=nn_nn_thud_rms_400_3_compress Av3=0.111279 In4=nn_nn_thud_rms_400_log_4_compress Av4=-1.37277 Out=nn_nn_thud_z_0_6 Offset=-0.00726295
+MACn In0=nn_nn_thud_rms_4k_0_compress Av0=0.265066 In1=nn_nn_thud_rms_4k_log_1_compress Av1=-0.0799549 In2=nn_nn_thud_rms_1k_2_compress Av2=-0.868757 In3=nn_nn_thud_rms_400_3_compress Av3=0.645988 In4=nn_nn_thud_rms_400_log_4_compress Av4=-0.131743 Out=nn_nn_thud_z_0_7 Offset=0.258284
+OTAx Pos=nn_nn_thud_z_0_0 Neg=mid Ibp=Gnd Out=nn_nn_thud_a_0_0 Ib=0.06475 Scale=15.444
+OTAx Pos=nn_nn_thud_z_0_1 Neg=mid Ibp=Gnd Out=nn_nn_thud_a_0_1 Ib=0.06475 Scale=15.444
+OTAx Pos=nn_nn_thud_z_0_2 Neg=mid Ibp=Gnd Out=nn_nn_thud_a_0_2 Ib=0.06475 Scale=15.444
+OTAx Pos=nn_nn_thud_z_0_3 Neg=mid Ibp=Gnd Out=nn_nn_thud_a_0_3 Ib=0.06475 Scale=15.444
+OTAx Pos=nn_nn_thud_z_0_4 Neg=mid Ibp=Gnd Out=nn_nn_thud_a_0_4 Ib=0.06475 Scale=15.444
+OTAx Pos=nn_nn_thud_z_0_5 Neg=mid Ibp=Gnd Out=nn_nn_thud_a_0_5 Ib=0.06475 Scale=15.444
+OTAx Pos=nn_nn_thud_z_0_6 Neg=mid Ibp=Gnd Out=nn_nn_thud_a_0_6 Ib=0.06475 Scale=15.444
+OTAx Pos=nn_nn_thud_z_0_7 Neg=mid Ibp=Gnd Out=nn_nn_thud_a_0_7 Ib=0.06475 Scale=15.444
+MACn In0=nn_nn_thud_a_0_0 Av0=0.723568 In1=nn_nn_thud_a_0_1 Av1=0.202909 In2=nn_nn_thud_a_0_2 Av2=1.06148 In3=nn_nn_thud_a_0_3 Av3=-1.42562 In4=nn_nn_thud_a_0_4 Av4=0.94759 In5=nn_nn_thud_a_0_5 Av5=-1.0023 In6=nn_nn_thud_a_0_6 Av6=-1.00568 In7=nn_nn_thud_a_0_7 Av7=0.242264 Out=nn_nn_thud_z_1_0 Offset=0.0138199
+MACn In0=nn_nn_thud_a_0_0 Av0=0.393351 In1=nn_nn_thud_a_0_1 Av1=-0.0205472 In2=nn_nn_thud_a_0_2 Av2=0.535238 In3=nn_nn_thud_a_0_3 Av3=0.915942 In4=nn_nn_thud_a_0_4 Av4=-0.205214 In5=nn_nn_thud_a_0_5 Av5=0.051763 In6=nn_nn_thud_a_0_6 Av6=1.41809 In7=nn_nn_thud_a_0_7 Av7=-0.550582 Out=nn_nn_thud_z_1_1 Offset=-0.0142853
+Sub2 Pos=nn_nn_thud_z_1_0 Neg=mid Out=nn_nn_thud_a_1_0_pre_scale Av=30.888
+SIGD In=nn_nn_thud_a_1_0_pre_scale Out=nn_nn_thud_a_1_0 Av=0.06475
+Sub2 Pos=nn_nn_thud_z_1_1 Neg=mid Out=nn_nn_thud_a_1_1_pre_scale Av=30.888
+SIGD In=nn_nn_thud_a_1_1_pre_scale Out=nn_nn_thud_a_1_1 Av=0.06475
+MACn In0=nn_nn_thud_a_1_0 Out=nn_thud Av0=2 Offset=0
+MACn In0=nn_nn_thud_a_1_1 Out=nn_shatter Av0=2 Offset=0
+
+% LPF
+Filt In=nn_thud Ref=Gnd Out=thud_filt type=0 order=1 fc=20 Av=1
+% LPF
+Filt In=nn_shatter Ref=Gnd Out=shatter_filt type=0 order=1 fc=10 Av=1
+% Diff Comp
+Vsrc Pos=vos_thud_cmp Neg=Gnd WavChan=-1 Vdc=0.015
+Add2 In1=vos_thud_cmp In2=mid Out=mid_vos_thud_cmp Av=1
+CmpX Pos=thud_filt Neg=mid_vos_thud_cmp Out=thud_cmp
+% Diff Comp
+Vsrc Pos=vos_shatter_cmp Neg=Gnd WavChan=-1 Vdc=0.015
+Add2 In1=vos_shatter_cmp In2=mid Out=mid_vos_shatter_cmp Av=1
+CmpX Pos=shatter_filt Neg=mid_vos_shatter_cmp Out=shatter_cmp
+% Overhang
+ChPu In=thud_cmp Out=thud_hang_cur Down=1.58034e-09 Up=1.58034e-11
+LInt In=thud_hang_cur Out=thud_hang_int rateUp=6.32775e+11 rateDown=6.32775e+11 zerosRes=0
+CmpX Neg=thud_hang_int Pos=Vhalf Out=thud_hang
+Not0 In1=thud_hang Out=thud_hang_inv
+% Overhang
+ChPu In=shatter_cmp Out=shatter_hang_cur Down=2.84461e-10 Up=1.58034e-11
+LInt In=shatter_hang_cur Out=shatter_hang_int rateUp=6.32775e+11 rateDown=6.32775e+11 zerosRes=0
+CmpX Neg=shatter_hang_int Pos=Vhalf Out=shatter_hang
+Not0 In1=shatter_hang Out=shatter_hang_inv
+% Thud timing logic
+And0 In1=thud_cmp In2=shatter_hang_inv Out=thud_declare
+% Shatter timing logic
+Not0 In1=thud_hang_inv Out=shatter_declare_not_thud_hang_inv
+And0 In1=shatter_cmp In2=shatter_declare_not_thud_hang_inv Out=shatter_declare_shatter_and_thud_hang
+And0 In1=shatter_declare_shatter_and_thud_hang In2=shatter_hang_inv Out=shatter_declare
+Not0 In1=shatter_declare Out=blinky
+
+% Preroll
+% Peak
+PkDD In=in_gain Out=in_gain_pktop Saturate=1 a=30000 d=1000 Par=.4
+% Diff Comp
+Vsrc Pos=vos_CmpTop Neg=Gnd WavChan=-1 Vdc=0.01
+Add2 In1=vos_CmpTop In2=in_gain_pktop Out=in_gain_pktop_vos_CmpTop Av=1
+CmpX Pos=in_gain Neg=in_gain_pktop_vos_CmpTop Out=CmpTop
+% Peak
+PkDD In=in_gain Out=in_gain_pkbot Saturate=1 a=1000 d=30000 Par=.4
+% Diff Comp
+Vsrc Pos=vos_CmpBot Neg=Gnd WavChan=-1 Vdc=0.01
+Add2 In1=vos_CmpBot In2=in_gain Out=in_gain_vos_CmpBot Av=1
+CmpX Pos=in_gain_pkbot Neg=in_gain_vos_CmpBot Out=CmpBot
+% DFF 
+Not0 In1=CmpTop Out=CmpTopb
+Vsrc Pos=CmpTop_trig_tiehi Neg=Gnd WavChan=-1 Vdc=2.5
+DFF0 D=CmpTop_trig_tiehi Clk=CmpTopb R=CmpTop_rst Q=CmpTop_trig
+% Overhang
+ChPu In=CmpTop_trig Out=CmpTop_rst_cur Down=1.18526e-08 Up=1.18526e-08
+LInt In=CmpTop_rst_cur Out=CmpTop_rst_int rateUp=6.32775e+11 rateDown=6.32775e+11 zerosRes=0
+CmpX Neg=CmpTop_rst_int Pos=Vhalf Out=CmpTop_rst
+% DFF 
+Not0 In1=CmpBot Out=CmpBotb
+Vsrc Pos=CmpBot_trig_tiehi Neg=Gnd WavChan=-1 Vdc=2.5
+DFF0 D=CmpBot_trig_tiehi Clk=CmpBotb R=CmpBot_rst Q=CmpBot_trig
+% Overhang
+ChPu In=CmpBot_trig Out=CmpBot_rst_cur Down=1.18526e-08 Up=1.18526e-08
+LInt In=CmpBot_rst_cur Out=CmpBot_rst_int rateUp=6.32775e+11 rateDown=6.32775e+11 zerosRes=0
+CmpX Neg=CmpBot_rst_int Pos=Vhalf Out=CmpBot_rst
+Orx0 In1=CmpTop_trig In2=CmpBot_trig Out=preroll_trig
+% Diff amp
+Sub2 Pos=inPos Neg=inNeg Out=diff_amp Av=0.5

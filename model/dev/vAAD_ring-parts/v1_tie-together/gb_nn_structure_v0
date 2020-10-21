@@ -1,0 +1,1624 @@
+# Created by Octave 5.1.0, Fri Oct 16 01:25:04 2020 GMT <unknown@DESKTOP-1LRT783>
+# name: nn
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 16
+# name: const
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 7
+# name: sub_vt_slope
+# type: scalar
+15.444015444015445
+
+
+# name: gm
+# type: scalar
+9.9999999999999995e-08
+
+
+# name: Iu
+# type: scalar
+5.0000000000000001e-09
+
+
+# name: Ibuff
+# type: scalar
+4.9999999999999998e-08
+
+
+# name: tanh
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: VinSw
+# type: scalar
+1
+
+
+# name: tanhSw
+# type: scalar
+0
+
+
+# name: reluSw
+# type: scalar
+0
+
+
+
+
+# name: sigd
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: VinSw
+# type: scalar
+1
+
+
+# name: tanhSw
+# type: scalar
+0
+
+
+# name: reluSw
+# type: scalar
+1
+
+
+
+
+# name: relu
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: VinSw
+# type: scalar
+1
+
+
+# name: tanhSw
+# type: scalar
+1
+
+
+# name: reluSw
+# type: scalar
+1
+
+
+
+
+
+
+# name: io
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: in
+# type: cell
+# rows: 1
+# columns: 5
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: pos
+# type: sq_string
+# elements: 1
+# length: 6
+rms_4k
+
+
+# name: neg
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+# name: ch
+# type: scalar
+6
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: pos
+# type: sq_string
+# elements: 1
+# length: 10
+rms_4k_log
+
+
+# name: neg
+# type: sq_string
+# elements: 1
+# length: 12
+noise_4k_log
+
+
+# name: ch
+# type: scalar
+5
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: pos
+# type: sq_string
+# elements: 1
+# length: 6
+rms_1k
+
+
+# name: neg
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+# name: ch
+# type: scalar
+4
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: pos
+# type: sq_string
+# elements: 1
+# length: 7
+rms_400
+
+
+# name: neg
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+# name: ch
+# type: scalar
+3
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: pos
+# type: sq_string
+# elements: 1
+# length: 11
+rms_400_log
+
+
+# name: neg
+# type: sq_string
+# elements: 1
+# length: 13
+noise_400_log
+
+
+# name: ch
+# type: scalar
+2
+
+
+
+
+
+
+
+# name: stage_in
+# type: scalar
+3
+
+
+# name: out
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 2
+# name: net
+# type: sq_string
+# elements: 1
+# length: 7
+nn_thud
+
+
+# name: ch
+# type: scalar
+4
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 2
+# name: net
+# type: sq_string
+# elements: 1
+# length: 10
+nn_shatter
+
+
+# name: ch
+# type: scalar
+5
+
+
+
+
+
+
+
+
+
+# name: in_compress
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 2
+# name: type
+# type: sq_string
+# elements: 1
+# length: 4
+tanh
+
+
+# name: scale
+# type: scalar
+15.444015444015445
+
+
+
+
+# name: macs
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 4
+# name: W
+# type: matrix
+# rows: 8
+# columns: 5
+ -1.3830054627568504 0.13243831231623376 0.50100833656810895 0.68829302131261383 1.4567676802014451
+ 0.98221534207784622 -0.39432782502340341 0.19225939464491354 -0.63825298220294346 0.15268457934132285
+ -0.57944393448070708 0.44920904012506135 0.87269906730297553 0.40433927715955353 0.42600626975958389
+ -1.5429305727356404 -0.67106687330019732 0.10993243102930303 -0.23848826089495156 -0.11320107656264253
+ -0.71993754125665543 1.7667373400303723 -0.12211985036671232 0.51729459964142976 0.41314081063372426
+ 0.66039069986899468 0.25684025339805849 0.1297921346703817 0.78127086926922273 1.0424120161495507
+ 0.80223449319280704 -0.5028263012488825 -0.010611996745732093 0.51424359456595448 0.81916113632455845
+ 0.17298326232429265 -0.15828367888318234 1.0772851956995533 0.92360103567805096 0.27710776537202997
+
+
+# name: b
+# type: matrix
+# rows: 8
+# columns: 1
+ 0.0035712857765236783
+ 0.24179638207161022
+ 0.21692370234711383
+ -0.0024356963548969848
+ -0.0046267959706673915
+ -0.01289573165094079
+ 0.22289646217952966
+ 0.038878761147526891
+
+
+# name: dW
+# type: matrix
+# rows: 8
+# columns: 5
+ 0.0003074233725851302 -0.00037596548069908543 -5.3289799339898211e-05 0.00021282456177301951 -0.00031983046819056201
+ 3.8511168617066566e-07 -3.4486926201685517e-07 -5.5003039985094509e-08 1.8784078723210139e-07 -3.1469203056351178e-07
+ -1.2266523440700044e-07 2.4346435293160039e-07 -6.7340622430468152e-08 -1.3265219571970575e-07 2.1293500044346015e-07
+ 0.00020139708489324258 1.2736583079074274e-05 -1.5673371970520636e-05 4.7962959465879237e-05 -1.6530780980991617e-05
+ 0.00027050621793161086 -0.00041674526986590387 -1.4591242550558981e-05 0.00023061390298368501 -0.00037625941080966964
+ 6.8809161701534761e-06 -0.00020048220344494105 1.5004864622470465e-05 5.9398903489827911e-05 -0.00017208634240258267
+ 1.8211888065160779e-07 4.5034633505022704e-07 -1.5856904915132421e-08 -6.1659354359037398e-08 2.8097745159065268e-07
+ -4.6119864551884066e-05 -5.1362660079290665e-05 -5.3760319457251729e-06 -7.105346797355602e-06 -2.8658227362636719e-05
+
+
+# name: db
+# type: matrix
+# rows: 8
+# columns: 1
+ -1.7211306260455093e-07
+ -9.8573239005827675e-06
+ -7.0794639789906484e-06
+ 6.1831003051036767e-06
+ -2.8683165526961641e-06
+ -3.5957298397630679e-06
+ -3.1365719705814923e-06
+ -3.3637009906901834e-05
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 4
+# name: W
+# type: matrix
+# rows: 2
+# columns: 8
+ 0.1417222631729774 -0.036160077724703657 -0.52681815710069912 -1.0189577072037996 1.2217589408131115 1.2573260465580589 -0.90682719813646739 0.8825034196950271
+ -1.5427194990393254 -0.84174084274919114 -0.069808998118122537 -0.88696901086379276 -1.0255213747638201 0.17299786168116757 -0.21257953517505523 0.37486294680944082
+
+
+# name: b
+# type: matrix
+# rows: 2
+# columns: 1
+ -0.046613001009971018
+ -0.0041487751505228897
+
+
+# name: dW
+# type: matrix
+# rows: 2
+# columns: 8
+ -0.00027782278900087976 2.2596284038943933e-06 1.6077296147072678e-06 0.0001025194913245286 -0.00040610646501388617 -0.00015102966218178969 2.2311070533199224e-06 2.1080463612513019e-05
+ 0.0005162036562828819 1.131593820086695e-06 2.8099359531144463e-06 0.00017727003165801333 0.00054866889855106221 4.7661861384507528e-05 9.6755457051853325e-07 -5.958467891136064e-05
+
+
+# name: db
+# type: matrix
+# rows: 2
+# columns: 1
+ 3.4215410228238555e-05
+ 2.3367886637778691e-05
+
+
+
+
+
+
+
+# name: act
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: type
+# type: sq_string
+# elements: 1
+# length: 4
+tanh
+
+
+# name: scale
+# type: scalar
+15.444015444015445
+
+
+# name: gp
+# type: function handle
+@<anonymous>
+@(z, gz) (1 - (gz) .^ 2)
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: type
+# type: sq_string
+# elements: 1
+# length: 4
+sigd
+
+
+# name: scale
+# type: scalar
+15.444015444015445
+
+
+# name: gp
+# type: function handle
+@<anonymous>
+@(z, gz) (gz .* (1 - gz))
+
+
+
+
+
+
+
+# name: arch
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 4
+# name: in
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: pos
+# type: cell
+# rows: 1
+# columns: 5
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 6
+rms_4k
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 10
+rms_4k_log
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 6
+rms_1k
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 7
+rms_400
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 11
+rms_400_log
+
+
+
+
+
+# name: neg
+# type: cell
+# rows: 1
+# columns: 5
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 12
+noise_4k_log
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+noise_400_log
+
+
+
+
+
+# name: loc
+# type: cell
+# rows: 1
+# columns: 5
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 3 6
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 3 5
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 3 4
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 3 3
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 3 2
+
+
+
+
+
+
+
+# name: ap
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 2
+# name: net
+# type: cell
+# rows: 1
+# columns: 5
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 28
+nn_nn_thud_rms_4k_0_compress
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+nn_nn_thud_rms_4k_log_1_compress
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 28
+nn_nn_thud_rms_1k_2_compress
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 29
+nn_nn_thud_rms_400_3_compress
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+nn_nn_thud_rms_400_log_4_compress
+
+
+
+
+
+# name: loc
+# type: cell
+# rows: 1
+# columns: 5
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 3 6
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 3 5
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 3 4
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 3 3
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 3 2
+
+
+
+
+
+
+
+# name: z
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: pos
+# type: cell
+# rows: 1
+# columns: 8
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_z_0_0
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_z_0_1
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_z_0_2
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_z_0_3
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_z_0_4
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_z_0_5
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_z_0_6
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_z_0_7
+
+
+
+
+
+# name: neg
+# type: cell
+# rows: 1
+# columns: 8
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+
+
+# name: loc
+# type: cell
+# rows: 1
+# columns: 8
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 0
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 1
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 2
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 3
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 4
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 5
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 6
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 7
+
+
+
+
+
+
+
+# name: a
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 2
+# name: net
+# type: cell
+# rows: 1
+# columns: 8
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_0
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_1
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_2
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_3
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_4
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_5
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_6
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_7
+
+
+
+
+
+# name: loc
+# type: cell
+# rows: 1
+# columns: 8
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 0
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 1
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 2
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 3
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 4
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 5
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 6
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 7
+
+
+
+
+
+
+
+
+
+
+# name: <cell-element>
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 4
+# name: ap
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 2
+# name: net
+# type: cell
+# rows: 1
+# columns: 8
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_0
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_1
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_2
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_3
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_4
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_5
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_6
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_0_7
+
+
+
+
+
+# name: loc
+# type: cell
+# rows: 1
+# columns: 8
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 0
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 1
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 2
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 3
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 4
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 5
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 6
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 4 7
+
+
+
+
+
+
+
+# name: z
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 3
+# name: pos
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_z_1_0
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_z_1_1
+
+
+
+
+
+# name: neg
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 3
+mid
+
+
+
+
+
+# name: loc
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 5 4
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 5 5
+
+
+
+
+
+
+
+# name: a
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 2
+# name: net
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_1_0
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 16
+nn_nn_thud_a_1_1
+
+
+
+
+
+# name: loc
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 5 4
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 5 5
+
+
+
+
+
+
+
+# name: out
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 2
+# name: net
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 7
+nn_thud
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 10
+nn_shatter
+
+
+
+
+
+# name: loc
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 5 4
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 5 5
+
+
+
+
+
+
+
+
+
+
+
+
+# name: out_scale
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 2
+# name: W
+# type: scalar
+2
+
+
+# name: b
+# type: scalar
+0
+
+
+
+
+# name: meta
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 1
+# name: learn
+# type: scalar
+0.080000000000000002
+
+
+
+
+# name: Z
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: A
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: W
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: matrix
+# rows: 8
+# columns: 5
+ -1.3830054627568504 0.13243831231623376 0.50100833656810895 0.68829302131261383 1.4567676802014451
+ 0.98221534207784622 -0.39432782502340341 0.19225939464491354 -0.63825298220294346 0.15268457934132285
+ -0.57944393448070708 0.44920904012506135 0.87269906730297553 0.40433927715955353 0.42600626975958389
+ -1.5429305727356404 -0.67106687330019732 0.10993243102930303 -0.23848826089495156 -0.11320107656264253
+ -0.71993754125665543 1.7667373400303723 -0.12211985036671232 0.51729459964142976 0.41314081063372426
+ 0.66039069986899468 0.25684025339805849 0.1297921346703817 0.78127086926922273 1.0424120161495507
+ 0.80223449319280704 -0.5028263012488825 -0.010611996745732093 0.51424359456595448 0.81916113632455845
+ 0.17298326232429265 -0.15828367888318234 1.0772851956995533 0.92360103567805096 0.27710776537202997
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 2
+# columns: 8
+ 0.1417222631729774 -0.036160077724703657 -0.52681815710069912 -1.0189577072037996 1.2217589408131115 1.2573260465580589 -0.90682719813646739 0.8825034196950271
+ -1.5427194990393254 -0.84174084274919114 -0.069808998118122537 -0.88696901086379276 -1.0255213747638201 0.17299786168116757 -0.21257953517505523 0.37486294680944082
+
+
+
+
+
+# name: b
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: matrix
+# rows: 8
+# columns: 1
+ 0.0035712857765236783
+ 0.24179638207161022
+ 0.21692370234711383
+ -0.0024356963548969848
+ -0.0046267959706673915
+ -0.01289573165094079
+ 0.22289646217952966
+ 0.038878761147526891
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 2
+# columns: 1
+ -0.046613001009971018
+ -0.0041487751505228897
+
+
+
+
+
+# name: activation_functions
+# type: matrix
+# rows: 1
+# columns: 2
+ 2 1
+
+
+# name: num_inputs
+# type: scalar
+5
+
+
+# name: num_outputs
+# type: scalar
+2
+
+
+# name: hw
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 2
+# name: W
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: matrix
+# rows: 8
+# columns: 5
+ -1.3830054627568504 0.13243831231623376 0.50100833656810895 0.68829302131261383 1.4567676802014451
+ 0.98221534207784622 -0.39432782502340341 0.19225939464491354 -0.63825298220294346 0.15268457934132285
+ -0.57944393448070708 0.44920904012506135 0.87269906730297553 0.40433927715955353 0.42600626975958389
+ -1.5429305727356404 -0.67106687330019732 0.10993243102930303 -0.23848826089495156 -0.11320107656264253
+ -0.71993754125665543 1.7667373400303723 -0.12211985036671232 0.51729459964142976 0.41314081063372426
+ 0.66039069986899468 0.25684025339805849 0.1297921346703817 0.78127086926922273 1.0424120161495507
+ 0.80223449319280704 -0.5028263012488825 -0.010611996745732093 0.51424359456595448 0.81916113632455845
+ 0.17298326232429265 -0.15828367888318234 1.0772851956995533 0.92360103567805096 0.27710776537202997
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 2
+# columns: 8
+ 0.1417222631729774 -0.036160077724703657 -0.52681815710069912 -1.0189577072037996 1.2217589408131115 1.2573260465580589 -0.90682719813646739 0.8825034196950271
+ -1.5427194990393254 -0.84174084274919114 -0.069808998118122537 -0.88696901086379276 -1.0255213747638201 0.17299786168116757 -0.21257953517505523 0.37486294680944082
+
+
+
+
+
+# name: b
+# type: cell
+# rows: 1
+# columns: 2
+# name: <cell-element>
+# type: matrix
+# rows: 8
+# columns: 1
+ 0.0035712857765236783
+ 0.24179638207161022
+ 0.21692370234711383
+ -0.0024356963548969848
+ -0.0046267959706673915
+ -0.01289573165094079
+ 0.22289646217952966
+ 0.038878761147526891
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 2
+# columns: 1
+ -0.046613001009971018
+ -0.0041487751505228897
+
+
+
+
+
+
+
+
+

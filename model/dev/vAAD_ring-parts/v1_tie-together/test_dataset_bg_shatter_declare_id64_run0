@@ -1,0 +1,957 @@
+# Created by Octave 5.1.0, Sun Oct 18 22:55:21 2020 GMT <unknown@DESKTOP-1LRT783>
+# name: dBspls
+# type: matrix
+# rows: 1
+# columns: 3
+ 64 74 84
+
+
+# name: metrics
+# type: scalar struct
+# ndims: 2
+ 1 1
+# length: 2
+# name: detections
+# type: cell
+# rows: 20
+# columns: 3
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 6
+# columns: 2
+ 0.5 4.6472500000000005
+ 4.6473125 4.6498125000000003
+ 4.6500000000000004 4.6517500000000007
+ 4.6518750000000004 4.6603124999999999
+ 4.6604999999999999 4.6630625000000006
+ 4.6633750000000003 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 62
+# columns: 2
+ 0.5 4.6447500000000002
+ 4.6448749999999999 4.6458124999999999
+ 4.6460625000000002 4.6470000000000002
+ 4.6474375000000006 4.64825
+ 4.6483750000000006 4.6484375
+ 4.648625 4.6486875000000003
+ 4.6488750000000003 4.649
+ 4.6490625000000003 4.64975
+ 4.6501250000000001 4.6507500000000004
+ 4.6508125000000007 4.6515625000000007
+ 4.6520625000000004 4.6528125000000005
+ 4.6531875000000005 4.6543749999999999
+ 4.6547499999999999 4.6555625000000003
+ 4.6558125000000006 4.6576875000000006
+ 4.6578125000000004 4.6586875000000001
+ 4.6590625000000001 4.6602500000000004
+ 4.6606250000000005 4.6616249999999999
+ 4.6616875000000002 4.6617500000000005
+ 4.6619375000000005 4.6630000000000003
+ 4.6636875 4.6646875000000003
+ 4.665 4.6659375000000001
+ 4.6663750000000004 4.6676875000000004
+ 4.6678125000000001 4.6686250000000005
+ 4.6690624999999999 4.6704375000000002
+ 4.6705000000000005 4.6706250000000002
+ 4.6710625000000006 4.6718125000000006
+ 4.6720625 4.6731875
+ 4.6738125000000004 4.6748125000000007
+ 4.6750000000000007 4.6763124999999999
+ 4.6766874999999999 4.6776249999999999
+ 4.6779999999999999 4.6791875000000003
+ 4.6792500000000006 4.6809375000000006
+ 4.681 4.6820000000000004
+ 4.6821250000000001 4.6829375000000004
+ 4.6830000000000007 4.6841875000000002
+ 4.6846250000000005 4.6874375000000006
+ 4.6876875 4.6890000000000001
+ 4.6890625000000004 4.6898750000000007
+ 4.6900625000000007 4.6911875000000007
+ 4.6916250000000002 4.6923750000000002
+ 4.6926250000000005 4.6946875000000006
+ 4.695125 4.6986875000000001
+ 4.6987500000000004 4.7002500000000005
+ 4.7003124999999999 4.7032500000000006
+ 4.7036250000000006 4.7040000000000006
+ 4.7040625 4.7054375000000004
+ 4.7055625000000001 4.7056250000000004
+ 4.7057500000000001 4.7078125000000002
+ 4.7080000000000002 4.7093125000000002
+ 4.7095625000000005 4.7109375
+ 4.7112500000000006 4.7121250000000003
+ 4.7123750000000006 4.7155624999999999
+ 4.7156250000000002 4.7181250000000006
+ 4.718375 4.719875
+ 4.7200625 4.7216250000000004
+ 4.7216875000000007 4.7240625000000005
+ 4.7243750000000002 4.72525
+ 4.7258125 4.7288125000000001
+ 4.7289375000000007 4.7313125000000005
+ 4.7313749999999999 4.7448750000000004
+ 4.7450000000000001 4.7592500000000006
+ 4.7595000000000001 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 22
+# columns: 2
+ 0.5 9.9781249999999986
+ 9.9782499999999992 9.9858750000000001
+ 9.9859999999999989 9.9867499999999989
+ 9.9868749999999995 9.9871874999999992
+ 9.9875624999999992 9.9878749999999989
+ 9.9879374999999992 9.9884374999999999
+ 9.9888124999999999 9.9891874999999999
+ 9.9893124999999987 9.989749999999999
+ 9.9898124999999993 9.9913124999999994
+ 9.9914375 9.9969374999999996
+ 9.9974375000000002 9.9979999999999993
+ 9.9984374999999996 9.9986249999999988
+ 9.9999374999999997 10.006375
+ 10.0075 10.007687499999999
+ 10.010187499999999 10.0104375
+ 10.01075 10.0111875
+ 10.011374999999999 10.023
+ 10.0230625 10.032999999999999
+ 10.033187499999999 10.033562499999999
+ 10.033687499999999 10.0483125
+ 10.048375 10.0590625
+ 10.0591875 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 58
+# columns: 2
+ 0.5 4.1799375000000003
+ 4.1800625 4.1946875000000006
+ 4.1948125000000003 4.2082500000000005
+ 4.2092499999999999 4.2225625000000004
+ 4.2229999999999999 4.2231250000000005
+ 4.2235624999999999 4.2283125000000004
+ 4.2284375000000001 4.2361875000000007
+ 4.2372500000000004 4.2416875000000003
+ 4.2419375000000006 4.2490625
+ 4.2500625000000003 4.2613125000000007
+ 4.2615000000000007 4.2616874999999999
+ 4.2621250000000002 4.2676875000000001
+ 4.2681250000000004 4.2793749999999999
+ 4.2795000000000005 4.2798125000000002
+ 4.2801875000000003 4.2914375000000007
+ 4.2915625000000004 4.2918750000000001
+ 4.2922500000000001 4.3038125000000003
+ 4.304125 4.3043125
+ 4.3047500000000003 4.3165624999999999
+ 4.3170625000000005 4.3172500000000005
+ 4.3176250000000005 4.3301875000000001
+ 4.3304375000000004 4.3306875000000007
+ 4.3310625000000007 4.4940000000000007
+ 4.4941250000000004 4.5162500000000003
+ 4.5165625 4.5249375000000001
+ 4.5258125000000007 4.5413125000000001
+ 4.5417500000000004 4.5778125000000003
+ 4.5780000000000003 4.5788125000000006
+ 4.5791875000000006 4.5911875000000002
+ 4.5912500000000005 4.5989374999999999
+ 4.5991875000000002 4.6005000000000003
+ 4.6009375000000006 4.6053750000000004
+ 4.6059999999999999 4.6147499999999999
+ 4.6154375000000005 4.6196250000000001
+ 4.6197500000000007 4.6278125000000001
+ 4.6280000000000001 4.6288125000000004
+ 4.6294374999999999 4.6371250000000002
+ 4.6373125000000002 4.6396250000000006
+ 4.6396875 4.6439375000000007
+ 4.6441875000000001 4.6448749999999999
+ 4.6452499999999999 4.6509375000000004
+ 4.6511875000000007 4.6524375000000004
+ 4.6527500000000002 4.6536249999999999
+ 4.6543125000000005 4.6555
+ 4.6557500000000003 4.6567500000000006
+ 4.6571875 4.6597500000000007
+ 4.6600000000000001 4.6612499999999999
+ 4.6614374999999999 4.6623749999999999
+ 4.6626250000000002 4.6636250000000006
+ 4.6639375000000003 4.6699375000000005
+ 4.6701250000000005 4.6721250000000003
+ 4.67225 4.8013124999999999
+ 4.8014999999999999 4.8018749999999999
+ 4.8020000000000005 4.8088750000000005
+ 4.8090000000000002 5.1252500000000003
+ 5.1254375000000003 5.1456249999999999
+ 5.1459375000000005 5.1594375000000001
+ 5.1597500000000007 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 1
+# columns: 2
+ 0.5 10.499749999999999
+
+
+
+
+
+# name: labels
+# type: cell
+# rows: 20
+# columns: 3
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+# name: <cell-element>
+# type: matrix
+# rows: 0
+# columns: 2
+
+
+
+
+
+
+

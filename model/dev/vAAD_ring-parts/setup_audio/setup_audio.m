@@ -6,7 +6,7 @@ audio_path  = expandVarPath('../../../../data/');
 label_list  = csvread([audio_path 'GB_TestClip_Short_v1_label.csv']);
 
 % Create audio variables
-x           = 2*x;
+x           = x; % *10^(-8/20); Used -8dB on the initial trim, but after reviewing mic recordings don't think we should have it--because it's a differential mic?
 t           = 0:1/Fs:(length(x)-1)/Fs;
 lab         = List2Detections(t,label_list);
 T0          = 1;

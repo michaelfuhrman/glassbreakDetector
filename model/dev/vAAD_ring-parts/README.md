@@ -218,3 +218,7 @@ set(gcf,'position',[43          91        1186         420])
 ```
 
 
+## Michael's input
+- Don't do background subtraction, let the neural nets sort it out for now.
+- Tanh may be viable if we use ROC curves to optimize parameters, which we need to do anyway.
+- Training should be less incestuous. I need to augment the training data.
