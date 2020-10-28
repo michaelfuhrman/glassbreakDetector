@@ -1,11 +1,13 @@
 global ramp_ic;
-ramp_ic.serverInfo=[];
-pkg load ramp_sdk
+if isempty(ramp_ic)
+	ramp_ic.serverInfo=[];
+	pkg load ramp_sdk
+	chipVersion=1;
+	connectionType=1;
+	ramp_setup;
+end
 pkg load analog_discovery
 ADopen;
-chipVersion=1;
-connectionType=1;
-ramp_setup;
 setup;
 trim_restore;
 for i = 2:4; figure(i); end

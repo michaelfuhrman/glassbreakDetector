@@ -15,9 +15,9 @@
 * **Done** Get a better answer on the target signal chain
 * **Expanded a little, but may want to revisit** Setup training set: incorporate findings from Ring's tests
 * **It does** Why doesn't the thud respond?
-* Revisit test signal level and gain distribution
-* Need to characterize the parts we are sending
-* Trim
+* **Done** Revisit test signal level and gain distribution
+* **Done** Need to characterize the parts we are sending
+* **Done** Trim
 * Check preroll
 
 ## First trim
@@ -75,13 +75,12 @@ Notes
 | Add diffamp and pins                 |   0.91 (can step to 1.5, w/ or w/o pins, but not w/o preroll logic) |
 |                                      |                                                                     |
 
-Do something about the extra vdd/gnd register in the netlist, it is causing the power to be higher
-Need to remove n/c's on CLB inputs? **no**
-Removed the bias point for the audio output
-Replaced pfets w/ pseudos
-Preroll logic is causing static power: not so sure now, might be a lot of switching power though? **problem was had disabled the diffamp and didn't have a defined input**
-
+* **Handled** Do something about the extra vdd/gnd register in the netlist, it is causing the power to be higher
+* Need to remove n/c's on CLB inputs? **no**
+* Removed the bias point for the audio output. **Did, but need to add it back**
 * **Done** Step through everything to get the power consumption of different parts
+* Replaced pfets w/ pseudos to help with routing
+* Preroll logic is causing static power: not so sure now, might be a lot of switching power though? **problem was had disabled the diffamp and didn't have a defined input**
 
 Incorporate **done**
 * Back off on peak detector attack: 4k, 1k or get a better way to trim or don't trim
@@ -95,22 +94,49 @@ Ran trim
 * SW issues with the implementation of comparator that used psuedo - took awhile to figure out the error message, but working now. Basically the trim routine expected to see a terminal called "vdd" on the comparator.
 * Looks good: Idd ~ 0.83mV. Preroll & detections working w/o manipulation.
 
-Characterize over standard dataset
 
-
-Assessment
+Assessment on trim clamping
 * **68:** Looks pretty good at 5. Looks pretty good with a fully centered implementation as well, maybe a little sensitive
 * **66:** Looks good at 0, maybe a bit sensitive. Looks good at 5. Fully centered didn't work at all.
 * **64:** Looks good at fully centered, maybe not quite sensitive. Looks good at 5. Looks good at 0
 * **67:** Didn't work at 5. Also didn't work at 0. Setting aside.
 
+## Bundle
+On 10/25/2020 went back and bundled my `ramp_sdk` setup (which now includes the trim and NN code) as well as my `analog_discovery`
+setup so that we can recreate this. I have updated the scripts here to use these bundled forms.
 
-After next trim
-* Tests leaving it running
-* Tests w/ gb tester again
-* Characterize over standard dataset
-* Firmware
-* Analyze part-to-part spread and where we need to apply corrections
-* Document
-* Videos to send? Can we send a setup they can use for quick verify?
-* Run with preroll reconstruction
+- `analog_discovery`: Version 1.1.5
+  - Bitbucket: https://bitbucket.org/aspinity/analog_discovery/src/master/build/analog_discovery_v1.1.5.tar.gz
+  - Dropbox: `%AspBox%/engr/sw/Utilities/analog_discovery/analog_discovery_v1.1.5.tar.gz`
+- `ramp_sdk`: Version 1.1.0
+  - Bitbucket: https://bitbucket.org/aspinity/ramp_sdk/src/master/build/ramp_sdk_v1.1.0_oct5.1.0.tar.gz
+  - Dropbox: `%AspBox%/engr/sw/Utilities/ramp_sdk/tars/ramp_sdk_v1.1.0_oct5.1.0.tar.gz`
+    
+## Todo: after the delivery of the 4 parts
+
+**Status:** We sent 4 parts which we had trimmed. We sent firmware for loading the mic-interface into the parts. We punted on
+including the full bitstream because we hadn't fully lined up and tested the trim LUT. We also punted on including preroll, which
+needs testing. Here's what we need to do:
+
+- **Done:** Figure out what happened to part 72 - nothing wring with it, just has a higher internal reference voltage
+- **Done** Get my `ramp_sdk` w/ updated `ramp_library` pushed 
+- Parse through the test results
+- Parse through the settings the results they sent to be prepared w/ info
+- Trim more parts and verify them for testing the trim LUT
+- Finalize the trim LUT firmware and settings
+- Integrate and test preroll
+- Get the 0.6V mic center added into the bitstream
+- Deal with the sign bits in the trim
+- Create a demo video to show to everybody
+- Create a datasheet on the delivered part with the power consumption, test results, ...
+- Test leaving it running to verify consistent behavior
+- FAR in real life test
+  - Get another EVB1, Connect to raspberry pi to get periodic counts, Setup another mic, Setup MSP430 VM to count and ...
+- Get the trim process improved and trim 25 parts
+
+## Testing on the standardized tests
+Here's the tests of the four glass break parts that were sent to Ring. Part 68 was done over basically the whole standardized test. The others were done over subsets. We've always said our target detection range is 85 to 110dBSPL. Apart from part 66, it is fairly close. I'm a little skeptical of the latency results as when I measured it I had problems with synchronizing the play and record channels. The False Triggers per Minute are taken over the noise files. We've targeted to be less than 5 FA/min for a fast detector, so that is essentially in range.
+
+![](../doc/pre_send_testing_68_66_64_67.png)
+
+

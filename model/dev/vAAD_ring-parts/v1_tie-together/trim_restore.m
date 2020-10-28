@@ -18,6 +18,10 @@ is_hardware  = 0;
 % Filename with results
 fname_save = sprintf("results/ramp%d/results.mat",id);
 printf('Loading %s...\n', fname_save);
+if ~exist(fname_save)
+	printf('No trim results to load for this part\n');
+	return
+end
 load(fname_save)
 
 more off

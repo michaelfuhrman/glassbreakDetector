@@ -63,5 +63,5 @@ t = (0 : size(feat, 1) - 1) / FsFeat;
 
 
 %% Save
-save -binary train_features feat FsFeat t lab
+%save -binary train_features feat FsFeat t lab
 % save train_features_stat stat

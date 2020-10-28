@@ -1,4 +1,3 @@
-addpath('~/Desktop/brandon-scratch/sw/ml/vAAA_weight_scaling/ramp_nn');
 import_audio;
 % run ../setup_audio/setup_mixed_audio
 

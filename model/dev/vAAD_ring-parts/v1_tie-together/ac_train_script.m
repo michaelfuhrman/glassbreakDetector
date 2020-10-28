@@ -31,7 +31,6 @@ plot(1:length(X),X, 1:length(Y), Y);
 % X = X(1:50:end,:);
 % Y = Y(1:50:end);
 
-addpath('~/Desktop/brandon-scratch/sw/ml/vAAA_weight_scaling/ramp_nn');
 rate					= 0.08;
 learns				= [.05,			.1,			.3,			.8,			2,		 4,			10,		 20,		40,   100,  200];
 learn_thresh	= [0.4e-3,	.3e-3,	.2e-3,	0.1e-3, 75e-6, 50e-6,	40e-6, 30e-6,	20e-6,15e-6,10e-6];

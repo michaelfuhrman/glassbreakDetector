@@ -9,9 +9,8 @@ global trim_meas_pwr = 0;
 global trim_logging  = 1;
 
 % Read ID from RAMP and then load into MCU
-addpath('~/Desktop/brandon-scratch/sw/util/vAAA_trim-store-logic/id_readout/permament');
 ramp_library;
-ramp_id = read_id(lib, ramp_ic);
+ramp_id = ramp_read_id(lib, ramp_ic);
 if ramp_id ~= 0
 	a1em_write('ID', ramp_id);
 end
@@ -19,11 +18,11 @@ end
 
 % Set paths first time
 if ~exist('trim_setup_init', 'var') || trim_setup_init
-  trim_version = '0.6';
-  run([getenv('AspBox') '/engr/sig_proc/Script_Library/Octave/hellbender_trim/' trim_version '/trim_setup']);
+  % trim_version = '0.6';
+  % run([getenv('AspBox') '/engr/sig_proc/Script_Library/Octave/hellbender_trim/' trim_version '/trim_setup']);
+	run(sprintf('%s/hellbender_trim/trim_setup.m', fileparts(which('ramp_setup'))));
 end
 
 % Run normal setup once paths have been configured
 trim_setup;
 
-addpath('~/Desktop/brandon-scratch/sw/ml/vAAA_weight_scaling/ramp_nn');
