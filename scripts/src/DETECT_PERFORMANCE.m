@@ -20,7 +20,7 @@ classdef DETECT_PERFORMANCE
       obj.FalseTriggers          = 0;
       obj.Events_Total           = 0;
       obj.Events_Missed          = 0;
-      obj.Events_Latency         = 1;
+      obj.Events_Latency         = [];
     end
 
     function obj = plus(obj1, obj2)
@@ -52,10 +52,11 @@ classdef DETECT_PERFORMANCE
     end
 
     function MeanLatency = MeanLatency(obj)
-      MeanLatency = mean(obj.Events_Latency);
+      MeanLatency = nanmean(obj.Events_Latency);
     end
 
     function disp(obj)
+      disp(['FAR (%): ' num2str(obj.FAR*100) '; FRR (%): ' num2str(obj.FRR*100)]);
       disp( ['# of false triggers: ' num2str(obj.FalseTriggers) ...
                                      '; Events missed (%): ' num2str(obj.EventMissPercentage)] );
       disp(['Average event latency (s): ' num2str(obj.MeanLatency)]);

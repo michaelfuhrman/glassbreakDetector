@@ -65,9 +65,9 @@ function sig=decimateArrays(sig,decFactor)
       ts=thisTest.t{s}; xs=thisTest.x{s}; ls=thisTest.l{s};
       for n=1:length(xs)
         t=ts(n); x=xs(n); l=ls(n);
-        tI=decimate(t,decFactor,'FIR');
-        xI=decimate(x,decFactor,'FIR');
-        lI=decimate(l,decFactor,'FIR')>0.5;
+        tI=decimate(t,decFactor,'fir');
+        xI=decimate(x,decFactor,'fir');
+        lI=decimate(l,decFactor,'fir')>0.5;
         % subplot(2,1,1); plot(tI,xI); subplot(2,1,2); plot(tI,lI); drawnow;
         ts(n)=tI; xs(n)=xI; ls(n)=lI;
       end

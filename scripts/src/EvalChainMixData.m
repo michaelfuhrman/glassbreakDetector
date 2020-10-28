@@ -19,10 +19,12 @@ function [t,y,l]=EvalChainMixData(chain,dataset1_txl,dataset2_txl,gain1,gain2,ev
 
   y=[];
   jsonOut=struct('source',sprintf('%s:Aspinity','Mixed files dataset'),'dataset','Mixed files dataset','data',[]);
-  rng(10);
+  rand("seed",10);
+  %rng(10);
   %event_order=randperm(length(t1));
   event_order=mod(randperm(no_files),length(t1))+1;
-  rng(5);
+  rand("seed",5);
+  %rng(5);
   % rng(2);
   %noise_order=randperm(length(t2));
   noise_order=mod(randperm(no_files),length(t2))+1;

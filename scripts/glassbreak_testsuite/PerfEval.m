@@ -24,6 +24,7 @@ function res = PerfEval(ramp,sigArrays,thresh,overhang)
   res.settings.overhang=overhang;
 
   tests=fieldnames(sigArrays);
+  acceptable_latency=[];
 
   for testNum=1:length(tests)
     thisTest=getfield(sigArrays,tests{testNum});
@@ -44,16 +45,16 @@ function res = PerfEval(ramp,sigArrays,thresh,overhang)
         jsonFile=struct('source','Aspinity', 'dataset','PerfEval');
         dataset_txl=struct('t',thisTest.t{s}, 'x',thisTest.x{s}, 'l',thisTest.l{s}, 'jsonFile',jsonFile);
         [t,y,l]=EvalChainSet(PostChain,dataset_txl,1);
-        [DetectTimes,LabelTimes,Durations]=ExtractDetections(t,y,l,0.5);
-        performance{s}=ExtractDetectPerformance(DetectTimes,LabelTimes,Durations);
+        detections=get_detections(t,y,l,0.5);
+        performance{s}=get_detection_performance(detections,acceptable_latency);
 
         resTest.thresh(end+1)=thresh(to);
         resTest.overhang(end+1,:)=overhang(to,:);
         resTest.spl(end+1)=thisTest.SPL(s);
         resTest.snr(end+1)=thisTest.SNR(s);
-        for lt=1:length(LabelTimes)
-          resTest.labels{length(resTest.snr),lt}=LabelTimes{lt};
-          resTest.triggers{length(resTest.snr),lt}=DetectTimes{lt};
+        for lt=1:length(detections)
+          resTest.labels{length(resTest.snr),lt}=detections{lt}.LabelTimes;
+          resTest.triggers{length(resTest.snr),lt}=detections{lt}.DetectTimes;
         end
         resTest.latency(end+1,:)=performance{s}.Events_Latency';
         resTest.detect(end+1,:)=performance{s}.Events_Latency'<1;

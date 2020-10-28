@@ -93,7 +93,7 @@ function table_data = GB_Test_Suite_Results(res,res_plot,res_table,success_thres
 
 
   %% Plots for SPL sweep
-  tpr=mean(res.eventSPL.detect(:,2:end)');
+  tpr=mean(res.eventSPL.detect(:,1:end)');
   spl=res.eventSPL.spl;
   for i=1:length(fomNd)
     nD=find(res.eventSPL.thresh'==thresh(fomNd(i)) & res.eventSPL.overhang(:,1)==overhang(fomNd(i),1) & res.eventSPL.overhang(:,2)==overhang(fomNd(i),2));
@@ -158,7 +158,7 @@ function table_data = GB_Test_Suite_Results(res,res_plot,res_table,success_thres
   end
 
   %% Plots for interferer sweep
-  tpr=mean(res.interfererSPL.detect(:,2:end)');
+  tpr=mean(res.interfererSPL.detect(:,1:end)');
   spl=res.interfererSPL.spl;
   for i=1:length(fomNd)
     nD=find(res.interfererSPL.thresh'==thresh(fomNd(i)) & res.interfererSPL.overhang(:,1)==overhang(fomNd(i),1) & res.interfererSPL.overhang(:,2)==overhang(fomNd(i),2));
@@ -254,7 +254,7 @@ function table_data = GB_Test_Suite_Results(res,res_plot,res_table,success_thres
   end
 
   %% Plots for snr sweep
-  tpr=mean(res.snrSPL.detect(:,2:end)');
+  tpr=mean(res.snrSPL.detect(:,1:end)');
   snr=res.snrSPL.snr;
   for i=1:length(fomNd)
     nD=find(res.snrSPL.thresh'==thresh(fomNd(i)) & res.snrSPL.overhang(:,1)==overhang(fomNd(i),1) & res.snrSPL.overhang(:,2)==overhang(fomNd(i),2));
