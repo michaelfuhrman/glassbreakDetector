@@ -37,11 +37,10 @@ def get_features(data, rate, orig_labels, data_duration, num_feat):
     return feats, labels
 
 ######## Duration and feature settings #########
-data_duration = 0.15 ### Time Period of each data point in seconds 
+data_duration = 0.05 ### Time Period of each data point in seconds 
 num_feat = 50 #### n_mfcc setting in librosa mfcc function
-os.environ["%AspBox%"] = '/mnt/c/Users/kruth/Aspinity Dropbox'
-datapath = '${%AspBox%}/engr/sig_proc/Signal_Library/Audio_Signals/Acoustic_Events/Glass_Break/GB_TestClip/'
-datapath =  os.path.expandvars(datapath)
+datapath = '../../../data'
+
 
 ############# Preprocessing for Training data ###########
 data, rate = librosa.load(os.path.join(datapath,'GB_TestClip_v1_16000.wav'))

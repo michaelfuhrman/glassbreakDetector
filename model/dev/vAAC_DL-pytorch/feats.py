@@ -14,9 +14,8 @@ def List2Detection(t,DetList):
             Detections[nD] = 1
     return Detections
 
-os.environ["%AspBox%"] = '/mnt/c/Users/kruth/Aspinity Dropbox'
-datapath = '${%AspBox%}/engr/sig_proc/Signal_Library/Audio_Signals/Acoustic_Events/Glass_Break/GB_TestClip/'
-datapath =  os.path.expandvars(datapath)
+datapath = '../../../data'
+
 data, rate = librosa.load(os.path.join(datapath,'GB_TestClip_v1_16000.wav'))
 t = [x/rate for x in range(len(data))]
 
@@ -29,7 +28,8 @@ with open(os.path.join(datapath,'GB_TestClip_v1_label.csv'), newline='') as csvf
 orig_labels = List2Detection(t,DetList) 
 
 clip_duration = len(data)/rate
-data_pt_duration = 0.15 #20ms
+data_pt_duration = 0.05 ### Time Period of each data point in seconds 
+
 window_width = rate*data_pt_duration
 num_data_pts = round(clip_duration/data_pt_duration)
 feats = []
@@ -63,6 +63,8 @@ for i in range(len(labels)):
     else:
         train_feats.append(feats[i])
         train_labels.append(labels[i])
+
+######## Save features and labels ########
 
 np.save('train_feats.npy', train_feats)
 np.save('train_labels.npy', train_labels)

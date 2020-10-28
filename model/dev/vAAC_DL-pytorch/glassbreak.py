@@ -100,7 +100,7 @@ def train(model, train_loader, val_loader, epochs):
                 'optimizer_state_dict': optimizer.state_dict(),
                 'best_val_acc': best_val,
                 'Epoch': epoch
-            }, 'saved_models/glassbreak_150ms_50feat.pt')
+            }, 'saved_models/glassbreak_50ms_50feat.pt')
 
 def validate(model, val_loader):
     model.eval()
@@ -214,7 +214,8 @@ axs[1,1].set_ylabel('FAR')
 axs[1,1].set_title('FAR Plot')
 axs[1,1].legend()
 
-fig.savefig('metrics_plot_150ms_50feat.jpg')
+fig.savefig('metrics_plot_50ms_50feat.jpg')
+
 
 
 

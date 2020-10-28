@@ -15,7 +15,8 @@ This folder contains the python/pytorch files used in feature extraction and tra
 1. `feats.py` contains code that extracts features and labels from an audio file and it's corresponding label file. It divides the audio signal into smaller clips of desired window of time (10ms, 50ms etc) and extracts MFCC features for each of those clips. Label for each of the clips correspond to the label at the end of that window. The clips and corresponding labes are then randomly divided as training set(75%) and validation set(25%).
 2. `glassbreak.py` contains the code that instantiates and trains the model for several epochs. The weights of model with the best validation accuracy are saved as a checkpoint to be used later for testing.
 3. `glassbreak_test.py` contains the code that loads the saved checkpoint and tests the performace of the model on an unseen audio file. It contains the code for both feature extraction and testing.
-4. `feats_sequential.py` extracts features just like `feats.py` for 2 audio files. Features and labels corresponding to 1 audio file are used for training and the other is used for validation.
+4. `feats_sequential.py` extracts features in the same way as `feats.py` for 2 audio files. Features and labels corresponding to 1 audio file are used for training and the other is used for validation.
+5. `feats_sliding.py` extracts features in the same way as `feats_sequential.py` but instead of extracting featues over non-overlapping windows, this slides the window by half the width of the window. 
 
 # Current Status
 Result folder contains all the details of the experiments performed and the results obtained for each of them. The one common trend that can be noticed with the current results is that when the network achieves low FAR its TPR also reduces. Being able to achieve low FAR while maintaining a high TPR is a big hurdle that we need to cross.

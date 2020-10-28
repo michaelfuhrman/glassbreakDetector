@@ -114,9 +114,8 @@ def validate(model, val_loader):
     return avg_loss, avg_acc, TPR, FAR, pred_list
 
 ######### Test data pre processing #########
-os.environ["%AspBox%"] = '/mnt/c/Users/kruth/Aspinity Dropbox'
-datapath = '${%AspBox%}/engr/sig_proc/Projects/External/Infineon/IAS_glassbreak/mharish/michael_gb_code'
-datapath =  os.path.expandvars(datapath)
+datapath = '../../../data'
+
 audio, rate = librosa.load(os.path.join(datapath,'GB_TestClip_Training_v1_16000.wav'))
 t = [x/rate for x in range(len(audio))]
 
@@ -128,8 +127,9 @@ with open(os.path.join(datapath,'GB_TestClip_Training_v1_label.csv'), newline=''
         DetList.append(row)
 orig_labels = List2Detection(t,DetList) 
 
-data_duration = 0.15 #20ms
-num_feat = 50
+data_duration = 0.05 ### Time Period of each data point in seconds
+num_feat = 50 #### n_mfcc setting in librosa mfcc function
+
 features, labels, plot_idx = get_features(audio, rate, orig_labels, data_duration, num_feat)
 feat_size = len(features[0])
 
@@ -142,7 +142,8 @@ model = Network(feat_size)
 model = nn.DataParallel(model).to(device)
 
 ######### Load saved model from checkpoint ##########
-checkpoint = torch.load('saved_models/glassbreak_150ms_50feat.pt', map_location=torch.device('cpu'))
+checkpoint = torch.load('saved_models/glassbreak_50ms_50feat.pt', map_location=torch.device('cpu'))
+
 model.load_state_dict(checkpoint['model_state_dict'])
 
 ######### Loss Function ###########
@@ -177,6 +178,7 @@ axs[1].set_xlabel('Time')
 axs[1].set_ylabel('Amplitude')
 axs[1].legend()
 
-fig.savefig('Result_plot_150ms_50feat.jpg')
+fig.savefig('Result_plot_50ms_50feat.jpg')
+
 
 
