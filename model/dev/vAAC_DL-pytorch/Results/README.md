@@ -1,10 +1,22 @@
+# Result 10: Test the best model on Standard Testbench
+T - Duration of each clip over which features are extracted  
+N - Number of MFCC features for each clip  
+Fs = 16kHz  
+
+The latest model where new features were concatenated with the MFCC features with T = 50ms and N = 100 was tested against the standard testbench. The detailed explanation and usage of glassbreak testsuite can be found [here](https://github.com/Aspinity/glassbreak/tree/master/scripts/glassbreak_testsuite).  
+
+The latency was a bit high due to the windowing technique that was used here vs the RAMP friendly model where you have an output for every timestep. The FAR was also lower than expected for the pytorch model due to the same reason. Overall, the performance of this model was found to be on par with RAMP friendly model.
+
+The evaluation result can be found [here](Standard-Test/README.md)
+
 
 # Result 9: New features concatenated with MFCC features
 T - Duration of each clip over which features are extracted  
 N - Number of MFCC features for each clip  
 Fs = 16kHz
 
-Trained both 1 and 2 layer model with data in sequential format where the features are concatenation of MFCC of current window and average of the MFCC of current and last 3 windows. It didn't improve the performance in either of the 2 cases.  
+
+Trained both 1 and 2 layer model with data in sequential format where the features are concatenation of MFCC of current window and average of the MFCC of current and last 3 windows. It didn't improve the performance by too much in either of the 2 cases.  
 (Note: The `get_features` function in `glassbreak_test.py` must be same as the one in `feats_sequential.py`)
 
 You can find the evaluation result for 1 Layer model [here](Sept-28-2020/README.md).  

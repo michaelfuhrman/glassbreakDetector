@@ -19,10 +19,9 @@ This folder contains the python/pytorch files used in feature extraction and tra
 5. `feats_sliding.py` extracts features in the same way as `feats_sequential.py` but instead of extracting featues over non-overlapping windows, this slides the window by half the width of the window. 
 
 # Current Status
-Result folder contains all the details of the experiments performed and the results obtained for each of them. The one common trend that can be noticed with the current results is that when the network achieves low FAR its TPR also reduces. Being able to achieve low FAR while maintaining a high TPR is a big hurdle that we need to cross.
+Result folder contains all the details of the experiments performed and the results obtained for each of them. We found that more number of layers does not always mean better performance as we were able to achieve good results with 1 LSTM layer (compared to 2 LSTM layers). The one common trend that can also be noticed with the current results is that there is a trade-off between FAR and event based latency. When the latency is low, FAR is quite high and vice versa. The performance of the current best model is similar to the glassbreak model on RAMP.  
 
 # Future Steps
-A few ideas that can be implemented in the future to get better performing network:
-1. Use a sliding window over the audio signal and extract MFCC features over the windowed clips. This might help by providing more data and context.
-2. Increasing/Decreasing the size of the network by adding/removing layers.
-3. Training the model with features extracted using window of varying length in a single training set.
+The next steps for this project include:
+1. Using techniques that will help in reducing the event based latency without increasing the FAR or reducing TPR.
+2. Create a RAMP friendly version of the current model so that it can be tested further.
