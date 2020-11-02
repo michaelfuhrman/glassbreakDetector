@@ -1,0 +1,678 @@
+{
+	"source": "Aspinity",
+	"dataset": "Vitron_Tester",
+	"data": [
+		{
+			"label": [
+				[1,10.606,11.7],
+				[1,13.286,14.37],
+				[1,16.196,17.28]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 1,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-006.wav"
+		},
+		{
+			"label": [
+				[1,10.485,11.6],
+				[1,12.885,14],
+				[1,15.246,16.34]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 1,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-007.wav"
+		},
+		{
+			"label": [
+				[1,10.529,11.61],
+				[1,12.949,14.06],
+				[1,15.746,16.87]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 1,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-008.wav"
+		},
+		{
+			"label": [
+				[1,10.176,11.27],
+				[1,13.584,14.68],
+				[1,16.202,17.3]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 1,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-009.wav"
+		},
+		{
+			"label": [
+				[1,11.491,12.65],
+				[1,13.859,15],
+				[1,16.11,17.265]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 1,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-010.wav"
+		},
+		{
+			"label": [
+				[1,10.821,12.03],
+				[1,13.166,14.4],
+				[1,15.465,16.71]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 1,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-011.wav"
+		},
+		{
+			"label": [
+				[1,10.16,11.233],
+				[1,13.129,14.204],
+				[1,16.259,17.333]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 2,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-012.wav"
+		},
+		{
+			"label": [
+				[1,10.101,11.195],
+				[1,12.201,13.28],
+				[1,14.208,15.32]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 2,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-013.wav"
+		},
+		{
+			"label": [
+				[1,9.178,10.32],
+				[1,11.514,12.675],
+				[1,13.942,15.11]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 2,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-014.wav"
+		},
+		{
+			"label": [
+				[1,11.861,12.95],
+				[1,14.683,15.78],
+				[1,17.134,18.24]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 2,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-015.wav"
+		},
+		{
+			"label": [
+				[1,9.139,10.36],
+				[1,11.812,12.97],
+				[1,14.285,15.43]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 2,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-016.wav"
+		},
+		{
+			"label": [
+				[1,18.236,19.47],
+				[1,21.252,22.48],
+				[1,23.661,24.89]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 2,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-017.wav"
+		},
+		{
+			"label": [
+				[1,8.675,9.747],
+				[1,11.083,12.156],
+				[1,13.373,14.445]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 4,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-018.wav"
+		},
+		{
+			"label": [
+				[1,10.22,11.29],
+				[1,12.63,13.703],
+				[1,15.205,16.276]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 4,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-019.wav"
+		},
+		{
+			"label": [
+				[1,9.918,11.08],
+				[1,12.313,13.48],
+				[1,14.621,15.79]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 4,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-020.wav"
+		},
+		{
+			"label": [
+				[1,10.222,11.34],
+				[1,13.037,14.135],
+				[1,15.337,16.43]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 4,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-021.wav"
+		},
+		{
+			"label": [
+				[1,10.764,11.945],
+				[1,14.295,15.495],
+				[1,17.244,18.44]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 4,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-022.wav"
+		},
+		{
+			"label": [
+				[1,12.605,13.86],
+				[1,15.177,16.41],
+				[1,17.687,18.92]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 4,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-023.wav"
+		},
+		{
+			"label": [
+				[1,12.48,13.55],
+				[1,14.815,15.89],
+				[1,17.226,18.3]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 8,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-024.wav"
+		},
+		{
+			"label": [
+				[1,9.561,10.67],
+				[1,12.167,13.29],
+				[1,14.74,15.86]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 8,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-025.wav"
+		},
+		{
+			"label": [
+				[1,10.665,11.8],
+				[1,13.036,14.21],
+				[1,15.159,16.34]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 8,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-026.wav"
+		},
+		{
+			"label": [
+				[1,11.319,12.42],
+				[1,13.706,14.805],
+				[1,16.031,17.13]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 8,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-028.wav"
+		},
+		{
+			"label": [
+				[1,10.043,11.235],
+				[1,12.226,13.428],
+				[1,14.358,15.54]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 8,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-029.wav"
+		},
+		{
+			"label": [
+				[1,9.028,10.28],
+				[1,11.425,12.67],
+				[1,13.803,15]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "office",
+				"distance": 8,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-030.wav"
+		},
+		{
+			"label": [
+				[1,10.649,11.725],
+				[1,13.397,14.473],
+				[1,15.825,16.901]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 1,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-031.wav"
+		},
+		{
+			"label": [
+				[1,12.319,13.44],
+				[1,14.443,15.6],
+				[1,16.323,17.47]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 1,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-032.wav"
+		},
+		{
+			"label": [
+				[1,10.068,11.265],
+				[1,12.504,13.71],
+				[1,14.791,15.97]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 1,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-033.wav"
+		},
+		{
+			"label": [
+				[1,11.339,12.46],
+				[1,13.748,14.88],
+				[1,16.283,17.4]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 1,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-034.wav"
+		},
+		{
+			"label": [
+				[1,13.356,14.56],
+				[1,16.754,17.99],
+				[1,20.116,21.34]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 1,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-035.wav"
+		},
+		{
+			"label": [
+				[1,10.068,11.34],
+				[1,12.51,13.8],
+				[1,14.772,16.06]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 1,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-036.wav"
+		},
+		{
+			"label": [
+				[1,13.534,14.63],
+				[1,16.328,17.42],
+				[1,18.682,19.767]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 2,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-037.wav"
+		},
+		{
+			"label": [
+				[1,12.894,14.06],
+				[1,15.529,16.71],
+				[1,17.676,18.87]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 2,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-038.wav"
+		},
+		{
+			"label": [
+				[1,12.108,13.33],
+				[1,14.507,15.75],
+				[1,16.639,17.85]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 2,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-039.wav"
+		},
+		{
+			"label": [
+				[1,12.373,13.55],
+				[1,14.826,15.99],
+				[1,17.225,18.4]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 2,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-040.wav"
+		},
+		{
+			"label": [
+				[1,12.15,13.43],
+				[1,14.527,15.793],
+				[1,16.739,18]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 2,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-041.wav"
+		},
+		{
+			"label": [
+				[1,11.62,12.97],
+				[1,13.935,15.25],
+				[1,16.223,17.54]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 2,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-042.wav"
+		},
+		{
+			"label": [
+				[1,12.202,13.28],
+				[1,14.81,15.9],
+				[1,17.002,18.1]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 4,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-043.wav"
+		},
+		{
+			"label": [
+				[1,12.314,13.5],
+				[1,14.864,16.06],
+				[1,17.687,18.87]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 4,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-044.wav"
+		},
+		{
+			"label": [
+				[1,10.182,11.4],
+				[1,12.758,13.97],
+				[1,15.225,16.5]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 4,
+				"mic": "stereo",
+				"sensitivity": -40,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-045.wav"
+		},
+		{
+			"label": [
+				[1,10.994,12.17],
+				[1,13.797,15],
+				[1,16.435,17.63]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 4,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "laminated"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-046.wav"
+		},
+		{
+			"label": [
+				[1,12.644,13.9],
+				[1,15.92,17.2],
+				[1,18.65,19.9]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 4,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "tempered"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-047.wav"
+		},
+		{
+			"label": [
+				[1,12.816,14.1],
+				[1,15.482,16.79],
+				[1,17.721,19.02]
+			],
+			"fs": 44100,
+			"extra": {
+				"location": "conference room",
+				"distance": 4,
+				"mic": "MEMS",
+				"sensitivity": -33,
+				"glass": "plate"
+			},
+			"file": "%AspBox%\\engr\\sig_proc\\Signal_Library\\Audio_Signals\\Acoustic_Events\\Glass_Break\\Glassbreak_data_folders\\Clean_windowbreak_files\\audio_files\/STE-048.wav"
+		}
+	]
+}
