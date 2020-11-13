@@ -17,7 +17,6 @@ end
 
 % Thud within this window after shatter is not valid
 ShatterBeforeThudLimit = gbP('ShatterBeforeThudLimit');
-ShatterBeforeThudLimit = .2;
 % Thud and shatter onsets may be closely spaced, so delay shatter
 ShatterDelay = gbP('ShatterDelay');
 

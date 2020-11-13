@@ -20,7 +20,7 @@ labelName{7} = 'first6min.csv';
 xp = [];
 tEnd = 0;
 labelsP=[];
-for audioFileNumber = [1 2 3 4 5 6]  %1:length(fname)
+for audioFileNumber = [2 3 4 5 6]  %1:length(fname)
         %% Read the labels
     labels=csvread(fullfile(dataDir, labelName{audioFileNumber}));
     labels = labels(:,1:2);
@@ -44,15 +44,21 @@ for audioFileNumber = [1 2 3 4 5 6]  %1:length(fname)
     Fs
     t(end)/60
 end
+halfHour = 16000*60*30;
+
+xp = xp(1:halfHour,1);
 
 t=(0:length(xp)-1)/Fs; t=t(:);
 t(end)/60
 
 labelsP(end,:)=[];
-audiowrite(fullfile(dataDir,'appendedWithHour2NPR.wav'),xp,Fs);
+
+%audiowrite(fullfile(dataDir,'appendedWithHour2NPR.wav'),xp,Fs);
+audiowrite(fullfile(dataDir,'FourClipsAppendedWithHour2NPR.wav'),xp,Fs);
 % Write the labels
 
-csvwrite(fullfile(dataDir,'appendedWithHour2NPR.csv'),labelsP);
+%csvwrite(fullfile(dataDir,'appendedWithHour2NPR.csv'),labelsP);
+csvwrite(fullfile(dataDir,'FourClipsAppendedWithHour2NPR.csv'),labelsP);
 l=List2Detections(t,labelsP);
 
 %figure;plot(t,xp,t,l,'k')

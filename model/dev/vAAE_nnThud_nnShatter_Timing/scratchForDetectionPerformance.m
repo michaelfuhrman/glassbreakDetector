@@ -6,6 +6,12 @@ function [declareShatter, mfilename, wavFile,TPs,FPs,mnLatency,duration] = scrat
 %  - Fill in hardware and rampsim details
 %  - Convert to trim project
 
+% Directory where the neural networks are being saved
+matDir = './nnMatFiles';
+if ~exist(matDir,'dir')
+   mkdir(matDir);
+end
+
 if ~exist('audioFileNumber','var')
     audioFileNumber = 1;
 end
@@ -16,11 +22,13 @@ fname{2} = 'GB_TestClip_v1_16000_mixed_included.wav';
 fname{3} = 'GB_TestClip_Training_v1_16000.wav';
 fname{4} = 'GB_TestClip_v2_16000.wav';
 fname{5} = 'GB_TestClip_Short_v1_16000.wav';
+fname{6} = 'appendedWith6minNPR.wav';
+fname{7} = 'appendedWithHour2NPR.wav';
 %fname{6} = 'overdriven_glass_break_1_000_a003_30_60_000.wav';
 %fname{7} = 'GBTD-01-01-LP-gb1_000.wav';
 
 %% Read in audio file and labels
-[~,rootFname] = fileparts(fname{audioFileNumber});
+[~,trainingData] = fileparts(fname{audioFileNumber});
 thisFile = fullfile(dataDir,fname{audioFileNumber});
 disp(['Reading ' thisFile])
 [x,Fs]=audioread(thisFile);
@@ -32,6 +40,8 @@ labelName{2}='GB_TestClip_v1_label_mixed_included.csv';
 labelName{3}='GB_TestClip_Training_v1_label.csv';
 labelName{4}='GB_TestClip_v2_label.csv';
 labelName{5}='GB_TestClip_Short_v1_label.csv';
+labelName{6}='appendedWith6minNPR.csv';
+labelName{7}='appendedWithHour2NPR.csv';
 %labelName{6}='GB_TestClip_v1_label_mixed_included.csv';
 %labelName{7}='GB_TestClip_v1_label.csv';
 
@@ -53,7 +63,14 @@ Chain=voltageScale > [ramp.ops.zcr() > ramp.ideal.amp('Av',.001); Chain1; Chain2
 
 y=Chain(t,x);
 %[nn, event_index, noise_index] = gb_testClip_train(t,y,l,acceptableLatency,gap,iterations)
-nn=gb_testClip_train(t,y,l,.2,0,5000);
+sTrain = ['TrainAudio' num2str(audioFileNumber)];
+gap = 0; sGap = 'pt0';
+latency = .2; sLatency = 'pt2';
+iterations = 5000;sIterations = '5K';
+nnName = ['scratch.' sTrain '.'  sGap '.' sLatency '.' sIterations '.mat'];
+nn_Name = fullfile(matDir,['nnThudShatter.' nnName]);
+nn=gb_testClip_train(t,y,l,latency,gap,iterations);
+save(nn_Name,'nn','trainingData','gap','latency','iterations');
 ynn=ramp_nn_eval(t,y,nn);
 
 if 0
@@ -90,7 +107,7 @@ TPs = potentialDetects - missedDetects;
 FPs = falseTriggers;
 mfilename = 'scratch';
 wavFile = fname{audioFileNumber};
-duration = t(end)
+duration = t(end);
 if 0 % Old performance code
     Performance=DetectionPerformance(DetectionList,LabelList(:,1:2),t(end));
     P = Performance;

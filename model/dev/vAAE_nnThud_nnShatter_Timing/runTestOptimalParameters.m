@@ -2,6 +2,13 @@ function runTestOptimalParameters
 % Close all files with open file IDs
 fclose all;
 
+gbParameters = setDefaultParameters;
+
+testOptimalParameters(gbParameters);
+            
+return
+
+function gbParameters = setDefaultParameters
 % Parameter keys for default values below
 parameterKeys = {'thudThresh'
     'shatterThresh'
@@ -51,11 +58,9 @@ parameterValues = {.3
     1
     0
     5000
-    'GB_TestClip_Training_v1_16000'
-    'GB_TestClip_Training_v1_label'};
+    'appendedWith6minNPR'
+     'appendedWith6minNPR'};
 
 gbParameters = containers.Map(parameterKeys, parameterValues);
-
-testOptimalParameters(gbParameters);
-            
 return
+

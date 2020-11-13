@@ -1,4 +1,4 @@
-function glassBreakRampDevWithParameters_v3(nnChainNumber,gbP,audioFileNumber)
+function glassBreakRampDevWithParameters_v3(nnChainNumber,gbP,audioFileNumber,trainingDataNumber)
 % function glassBreakRampDevFunctionalForm(nnChainNumber, audioFileNumber, NNSUBTRACTIONS)
 
 % Input switches
@@ -36,7 +36,7 @@ end
 % Whether to subtract Thud NN output from Shatter NN output and vice versa
 % The rationale is to suppress times where the input signals are not
 % specific to one sound or the other
-NNSUBTRACTIONS=1;
+NNSUBTRACTIONS=0;
 sNNSubtraction=num2str(NNSUBTRACTIONS);
 % Wei for combining neural net outputs
 nnWeight = 1;
@@ -182,10 +182,29 @@ gap=0;sGap='pt0';
 acceptableLatency = .05;sLatency='pt05';
 
 % Include the source of the training data in the filename
-[~,trainingFileName] = fileparts(fname{3});
+[~,trainingFileName] = fileparts(fname{trainingDataNumber});
+
+sTrain = ['TrainAudio' num2str(trainingDataNumber)];
+gap = 0; sGap = 'pt0';
+latency = .2; sLatency = 'pt2';
+iterations = 5000;sIterations = '5K';
+nnName = [sMethod '.' sTrain '.'  sGap '.' sLatency '.' sIterations '.mat'];  
+nnTHUD_Name = fullfile(matDir,['nnThud.' nnName]);
+nnZCR_Name = fullfile(matDir,['nnZCR.' nnName]);
+
+% Read in the training audio if it doesn't correspond to the input audio
+if audioFileNumber~=trainingDataNumber
+    [xTraining,FsTraining]=audioread(thisFile);
+    tTraining=(0:length(xTraining)-1)/FsTraining;
+    yTraining=Chain(tTraining,xTraining);
+end
+
+
+
+
 sFreq = ['_fc_' num2str(gbP('lfFC')) '_' num2str(gbP('hfFC'))];
-nnTHUD_Name = fullfile(matDir,['nnThud' sFreq sMethod '_gap_' sGap '_lat_' sLatency '_' rootFname '.mat']);
-%nnTHUD_Name = fullfile(matDir,['nnThud_' sMethod '_gap_' sGap '_latency_' sLatency '_' trainingFileName '.mat']);
+%nnTHUD_Name = fullfile(matDir,['nnThud' '_Iter' sIter sFreq sMethod '_gap_' sGap '_lat_' sLatency '_' rootFname '.mat']);
+nnTHUD_Name = fullfile(matDir,['nnThud_' sMethod '_gap_' sGap '_latency_' sLatency '_' trainingFileName '.mat']);
 if ~exist(nnTHUD_Name,'file')
     [nnThud,event_indexThud, noise_indexThud]=gb_testClip_train(t,y,l,acceptableLatency,gap,iterations);
     nnThud=nnScrub(nnThud);
@@ -198,8 +217,8 @@ end
 % Don't collect training data until 50msec passed label
 gap=.05; sGap = 'pt05';
 acceptableLatency = .2;sLatency='pt2';
-nnZCR_Name = fullfile(matDir,['nnZCR' sFreq sMethod '_gap_' sGap '_lat_' sLatency '_' rootFname '.mat']);
-%nnZCR_Name = fullfile(matDir,['nnZCR_' sMethod '_gap_' sGap '_latency_' sLatency '_' trainingFileName '.mat']);
+%nnZCR_Name = fullfile(matDir,['nnZCR' '_Iter' sIter sFreq sMethod '_gap_' sGap '_lat_' sLatency '_' rootFname '.mat']);
+nnZCR_Name = fullfile(matDir,['nnZCR_' sMethod '_gap_' sGap '_latency_' sLatency '_' trainingFileName '.mat']);
 if ~exist(nnZCR_Name,'file')
     [nnZCR,event_indexZCR, noise_indexZCR]=gb_testClip_train(t,y,l,acceptableLatency,gap,iterations);
     nnZCR=nnScrub(nnZCR);
@@ -207,6 +226,7 @@ if ~exist(nnZCR_Name,'file')
 else
     load(nnZCR_Name, 'nnZCR','event_indexZCR', 'noise_indexZCR','gap','acceptableLatency');    
 end
+
 close all
 % Override the neural nets
 if isempty(gbP('TrainingData'))
@@ -214,9 +234,11 @@ if isempty(gbP('TrainingData'))
 else
     trainingData = gbP('TrainingData');
     if nnChainNumber == 1
+        % 'LogBslnZCR'
         load(fullfile(matDir, ['nnThud' sFreq sMethod '_gap_pt0_lat_pt05_' trainingData '.mat']));
         load(fullfile(matDir, ['nnZCR' sFreq sMethod '_gap_' sGap '_lat_' sLatency '_' trainingData '.mat']));
     elseif nnChainNumber == 2
+        % 'TanhBslnZCR'
         load(fullfile(matDir, 'nnThud_TanhBaselineAndZCR_gap_pt0_latency_pt05_appendedWith6minNPR.mat'));
         load(fullfile(matDir, 'nnZCR_TanhBaselineAndZCR_gap_pt05_latency_pt2_appendedWith6minNPR.mat  '));
         trainingData = 'appendedWith6minNPR';
@@ -241,6 +263,8 @@ if length(t) > oneHalfHr
 end
 
 % Are the two methods for generating and evaluating the NN equivalent?
+load('nnThud_Iter5000_fc_400_4000LogBslnZCR_gap_pt0_lat_pt05_appendedWith6minNPR.mat','nnThud')
+load('nnZCR_Iter5000_fc_400_4000LogBslnZCR_gap_pt05_lat_pt2_appendedWith6minNPR.mat','nnZCR')
 ynnThud=ramp_nn_eval(t,y,nnThud);
 ynnShatter=ramp_nn_eval(t,y,nnZCR);
 
@@ -365,6 +389,21 @@ else
     [declareThud, declareShatter] = applyTimingLogic_v3(ramp, t,l,ynnThud, ynnShatter,gbP,ThudBeforeShatter);
 end
 
+% Compare with model chain
+if 1
+    load('nnThud_Iter5000_fc_400_4000LogBslnZCR_gap_pt0_lat_pt05_appendedWith6minNPR.mat','nnThud')
+    load('nnZCR_Iter5000_fc_400_4000LogBslnZCR_gap_pt05_lat_pt2_appendedWith6minNPR.mat','nnZCR')
+    [ThudChain, ShatterChain] = gb_model_2020_11_03_v2(ramp,nnThud, nnZCR);
+    
+    figure;
+    subplot(211);plot(t,1.05*declareShatter,'r', t,l,'k');ax(1)= gca;
+    title('applyTimingLogic_v3 Results','interpreter','none')
+    xlabel('Time (seconds)')
+    subplot(212);plot(t,1.1*ShatterChain(t,x),'r',t,l,'k');ax(2)=gca;
+    title('gb_model_2020_11_03 Results','interpreter','none')
+    xlabel('Time (seconds)')
+    linkaxes(ax)
+end
 %figure;plot(t,1.05*declareThud,'b',t,1.05*declareShatter,'r', t,l,'k')
 %title('validThudPulse and wideValidThudPulse.*shatterPulse')
 

@@ -66,12 +66,17 @@ end
 %gbP('TrainingData')=[];
 % the default is GB_TestClip_Training_v1_16000
 % Group by chain, then by processing method
+%gbP('ShatterDelay')=0.0001;
+%gbP('ShatterBeforeThudLimit')=0.0001;
+gbP('Iterations')=5000;
 for nnChainNumber = 1 %[1 2] %[0 1 2]
     for THUDPEAK = [0 1 2 3]
         % Loop through all the audio files
         for audioFileNumber = [1 2 3 4 5 6 7]
+            trainingDataNumber = audioFileNumber;
+            trainingDataNumber = 6;
             gbP('ThudPeak')=THUDPEAK;
-            glassBreakRampDevWithParameters_v3(nnChainNumber,gbP,audioFileNumber);
+            glassBreakRampDevWithParameters_v3(nnChainNumber,gbP,audioFileNumber,trainingDataNumber);
         end
     end
 end
